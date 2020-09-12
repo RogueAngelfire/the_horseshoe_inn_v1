@@ -42,17 +42,17 @@ availability.
 
 Home &  Page
 
-![](horseshoe_inn/mockup_images/filename%20horseshoe_1.png)
+![1](horseshoe_inn/mockup_images/filename%20horseshoe_1.png)
 
-![](horseshoe_inn/mockup_images/filename%20horseshoe_2.png)
+![2](horseshoe_inn/mockup_images/filename%20horseshoe_2.png)
 
-![](horseshoe_inn/mockup_images/filename%20horseshoe_3.png)
+![3](horseshoe_inn/mockup_images/filename%20horseshoe_3.png)
 
-![](horseshoe_inn/mockup_images/filename%20horseshoe_4.png)
+![4](horseshoe_inn/mockup_images/filename%20horseshoe_4.png)
 
-![](horseshoe_inn/mockup_images/filename%20horseshoe_5.png)
+![5](horseshoe_inn/mockup_images/filename%20horseshoe_5.png)
 
-![](mockup_images/filename%20horseshoe_6.png)
+![6](mockup_images/filename%20horseshoe_6.png)
 
 # User Stories
 
