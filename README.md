@@ -1,6 +1,6 @@
 # Robin Collins Final Landmark Assignment Django Full Stack
 
-### The Horseshoe Inn
+## The Horseshoe Inn
 
 # Project Purpose
 
