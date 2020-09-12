@@ -40,21 +40,32 @@ availability.
 
 # Wireframes
 
-Home &  Page
+Home & Menu
 
-![](https://github.com/RogueAngelfire/the_horseshoe_inn_v1/blob/master/horseshoe_inn/mockup_images/horseshoe_1.png)
+![Wireframe Home Menu](horseshoe_inn/mockup_images/horseshoe_1.png)
 
-![](https://github.com/RogueAngelfire/the_horseshoe_inn_v1/blob/master/horseshoe_inn/mockup_images/horseshoe_2.png)
+Rooms & MENU REQUIRES AN AMMEND <!-- Ammend the contact to alternate -->
 
-![](https://github.com/RogueAngelfire/the_horseshoe_inn_v1/blob/master/horseshoe_inn/mockup_images/horseshoe_3.png)
+![Wireframe Rooms](horseshoe_inn/mockup_images/horseshoe_2.png)
 
-![](https://github.com/RogueAngelfire/the_horseshoe_inn_v1/blob/master/horseshoe_inn/mockup_images/horseshoe_4.png)
+Room with room selected & Date Booking Select
 
-![](https://github.com/RogueAngelfire/the_horseshoe_inn_v1/blob/master/horseshoe_inn/mockup_images/horseshoe_5.png)
+![Wireframe Room with Select Room](horseshoe_inn/mockup_images/horseshoe_3.png)
 
-![](https://github.com/RogueAngelfire/the_horseshoe_inn_v1/blob/master/horseshoe_inn/mockup_images/horseshoe_6.png)
+Room enter details booking with payment & Booking Confirmation
+
+![Wireframe Booking and Payment](horseshoe_inn/mockup_images/horseshoe_4.png)
+
+Contact page & Respose to webform message page
+
+![Wireframe Contact and Response](horseshoe_inn/mockup_images/horseshoe_5.png)
+
+Terms & Conditions and a Covid-19 public information for rules and regulations
+
+![Wireframe Terms and conditions](horseshoe_inn/mockup_images/horseshoe_6.png)
 
 # User Stories
+
 
 ## Usability and Visual Impact:
 
