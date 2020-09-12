@@ -40,7 +40,19 @@ availability.
 
 # Wireframes
 
+Home &  Page
 
+![](mockup_images/filename%20horseshoe_1.png)
+
+![](mockup_images/filename%20horseshoe_2.png)
+
+![](mockup_images/filename%20horseshoe_3.png)
+
+![](mockup_images/filename%20horseshoe_4.png)
+
+![](mockup_images/filename%20horseshoe_5.png)
+
+![](mockup_images/filename%20horseshoe_6.png)
 
 # User Stories
 
