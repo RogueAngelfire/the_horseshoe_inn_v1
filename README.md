@@ -42,17 +42,17 @@ availability.
 
 Home &  Page
 
-![1](the_horseshoe_inn_v1/horseshoe_inn/mockup_images/filename%20horseshoe_1.png)
+![](https://github.com/RogueAngelfire/the_horseshoe_inn_v1/blob/master/horseshoe_inn/mockup_images/horseshoe_1.png)
 
-![2](the_horseshoe_inn_v1/horseshoe_inn/mockup_images/filename%20horseshoe_2.png)
+![](https://github.com/RogueAngelfire/the_horseshoe_inn_v1/blob/master/horseshoe_inn/mockup_images/horseshoe_2.png)
 
-![3](the_horseshoe_inn_v1/horseshoe_inn/mockup_images/filename%20horseshoe_3.png)
+![](https://github.com/RogueAngelfire/the_horseshoe_inn_v1/blob/master/horseshoe_inn/mockup_images/horseshoe_3.png)
 
-![4](the_horseshoe_inn_v1/horseshoe_inn/mockup_images/filename%20horseshoe_4.png)
+![](https://github.com/RogueAngelfire/the_horseshoe_inn_v1/blob/master/horseshoe_inn/mockup_images/horseshoe_4.png)
 
-![5](the_horseshoe_inn_v1/horseshoe_inn/mockup_images/filename%20horseshoe_5.png)
+![](https://github.com/RogueAngelfire/the_horseshoe_inn_v1/blob/master/horseshoe_inn/mockup_images/horseshoe_5.png)
 
-![6](the_horseshoe_inn_v1/horseshoe_inn/mockup_images/filename%20horseshoe_6.png)
+![](https://github.com/RogueAngelfire/the_horseshoe_inn_v1/blob/master/horseshoe_inn/mockup_images/horseshoe_6.png)
 
 # User Stories
 
