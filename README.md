@@ -38,6 +38,10 @@ for instance breakfast. By having the option to register will allow the Inn to h
 with a checkbox on registration they can recieve quarterly/monthly news letters or be informed of last minute room
 availability.
 
+# Wireframes
+
+
+
 # User Stories
 
 ## Usability and Visual Impact:
