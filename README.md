@@ -66,6 +66,7 @@ Terms & Conditions and a Covid-19 public information for rules and regulations
 
 # User Stories
 
+![userstories](horseshoe_inn/mockup_images/userstories.png)
 
 ## Usability and Visual Impact:
 
