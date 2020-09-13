@@ -44,7 +44,7 @@ Home & Menu
 
 ![Wireframe Home Menu](horseshoe_inn/mockup_images/horseshoe_1.png)
 
-Rooms & MENU REQUIRES AN AMMEND <!-- Ammend the contact to alternate -->
+Rooms & Romms Scrolled down
 
 ![Wireframe Rooms](horseshoe_inn/mockup_images/horseshoe_2.png)
 
@@ -68,8 +68,6 @@ Terms & Conditions and a Covid-19 public information for rules and regulations
 
 
 ## Usability and Visual Impact:
-
-
 
 # Suitability for purpose
 
@@ -124,9 +122,23 @@ security not putting SECRET_KEYS in wrong place using config vars in Heroku
 
 # Testing write-up
 
-# Readme file
-
 # Comments
+
+In the early stages of development I was having linking issues with the Readme file. Basically I wanted
+the best assignment possible with the best readme therefore wanted to add images to the readme rather
+than have them stored in a Wireframes folder. I had been shown how impressive some of these files are
+and it left me inspired.
+
+It is something I hadn't learned on the course so decided to research into this and successfully found
+videos of this on YouTube. However I think the video was slightly dated and got a few errors with the
+links not working correctly and I decided to edit within Github rather than GitPod. This was something
+I hadn't done before so I did make 2 or 3 commit errors by not adding a coment in the box at the bottom
+of the page and the preview option until my 4th attempt.
+
+I contacted tutor support as concerned these errors would go against me hence I am documenting them
+now to make the assor aware of my errors which I can say have now been resolved. Despite all of this I
+found it a great learning curb as worked out alternate ways to update and alter using git commands and
+editing from Github directly.
 
 # Data store integration
 
