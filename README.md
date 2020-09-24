@@ -141,6 +141,19 @@ now to make the assor aware of my errors which I can say have now been resolved.
 found it a great learning curb as worked out alternate ways to update and alter using git commands and
 editing from Github directly.
 
+In week two of development my friend sent me images of The Horseshoe Inn since it had been refurbished
+however these images I recieved were very small images suitable for smaller devices but not the large
+screens. However, due to his workload he has been unable to get the images to me and further deadlines
+get missed due to how busy he is that after a week I have decided to continue with image placers that
+fill the gaps until he has time to fullfil my request. I am due to visit in late October 2020 but feel that
+this assignment needs to be completed before then as good practise for the industy.
+
+Furthermore, while working on this assignment I have also undertook the task of building another Django 
+website for another customer my niece for her vegan cake shop Vixen's Vegan Delights. I did this as I 
+knew the amount of pressure my friend is under buying a pub during a pandemic and making it work knowing 
+potentially it could go very wrong. To assist him I have plenty of ideas to support him on the way to his
+and my successes.
+
 # Data store integration
 
 # Deployment implementation
