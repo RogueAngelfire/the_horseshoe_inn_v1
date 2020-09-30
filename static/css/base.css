@@ -83,3 +83,12 @@ body {
         padding-top: 164px;
     }
 }
+
+#footer {
+    margin-bottom: 0 !important;
+    padding: 10px;
+    position: sticky;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -o-sticky
+}
