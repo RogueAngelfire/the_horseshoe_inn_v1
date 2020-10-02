@@ -123,7 +123,13 @@ security not putting SECRET_KEYS in wrong place using config vars in Heroku
 
 # Testing write-up
 
-# Comments
+# Technologies Used
+
+* Django 
+* Bootstrap - https://getbootstrap.com/
+* mdbootstrap - https://mdbootstrap.com/docs/jquery/navigation/footer/
+
+# Comments and Diary
 
 In the early stages of development I was having linking issues with the Readme file. Basically I wanted
 the best assignment possible with the best readme therefore wanted to add images to the readme rather
@@ -153,6 +159,17 @@ website for another customer my niece for her vegan cake shop Vixen's Vegan Deli
 knew the amount of pressure my friend is under buying a pub during a pandemic and making it work knowing 
 potentially it could go very wrong. To assist him I have plenty of ideas to support him on the way to his
 and my successes.
+
+02/10/20
+I have found out my deadlines and after a chat with my mentor he has advised me not to take on the huge
+task of simoutaniously building 2 large websites as just one was pointed out to me by student services as
+a behemoth. I have also been in contact with Paul again at The Horseshoe Inn and he agrees that the
+work load for both of us is vast. This project will remain the priority and I will continue with 
+Vixen's Vegan Delights after I am closer in completing this assignment.
+Furthermore, I am due to travel back to Scotland for further meetings and include terms and conditions
+and take proffessional pictures of the establishment. My cut off day for the assignment is 16th December
+however, I hope to submit the assignemt around the 1st November to allow me to assist other customers 
+and clients I have gathered.
 
 # Data store integration
 
