@@ -88,6 +88,25 @@ Terms & Conditions and a Covid-19 public information for rules and regulations
 
 # Colour scheme and typography
 
+Using google fonts and my fonts dot com. I used a picture of the front of the inn to identify
+what their pub font is and the closest match that was free was Libre Baskerville.
+<!-- Don't forget to add visual colour images here and remove this comment when completed-->
+This will keep continuity with the establishmennt and to continue with the continuity I have
+gone with their new green iterior colour scheme which is #B6D7A8 the font colour for the logo font
+is B2B2AB I picked this colour as a colour match from photoshop from the picture with the font.
+This colour is subject to change as the image give the impression its a soft gold but I have a grey
+green look. This could be due to the current low resolution of the images. I will look again when I
+take photographs later this month. What does concern me later is the possible adverse weather conditions 
+to bring out the best lights but this has never been an issue before.
+
+Orginally as to familiarise myself with this assignment I am using the code institude Boutique Ado education
+videos to guide men through the process and I did think the black and white colours for Font ands banners went 
+extremely well with the colours of the front of the pub and I didn't want to change them but glad I did as 
+the softer tones feel more inviting and a lot more relaxed and in keeping with the lushious scenery and countryside
+surrounding the Horseshoe Inn. It featured in my choices when discussing this project with my client in July and
+it was in my mock up styles and what is evenmore impressive my client painted a lot of there interior with the same
+colour so for continuity reasons it would be silly not to match this.
+
 ## Code Quality:
 
 # Appropriate use of HTML
@@ -125,9 +144,18 @@ security not putting SECRET_KEYS in wrong place using config vars in Heroku
 
 # Technologies Used
 
-* Django 
+* Django
+* Github
+* GitPod
+* Heroku
 * Bootstrap - https://getbootstrap.com/
 * mdbootstrap - https://mdbootstrap.com/docs/jquery/navigation/footer/
+* Google Fonts - https://fonts.google.com/
+* What the font - https://www.myfonts.com/WhatTheFont/
+* Json Formatter - https://jsonformatter.org/
+* Code Pen - https://codepen.io/
+* Django Key Generator - https://miniwebtool.com/
+* Unsplash - https://unsplash.com/
 
 # Comments and Diary
 
