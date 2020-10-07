@@ -99,12 +99,15 @@ footer.page-footer {
 h1.display-4 {
     margin: 50px;
 }
-/*
-#footer {
-    margin-bottom: 0 !important;
-    padding: 10px;
-    position: sticky;
-    position: -webkit-sticky;
-    position: -moz-sticky;
-    position: -o-sticky
-} */
+
+.fa-facebook:before {
+    color:#fff;
+    font-size: 30px;
+    padding: 5px;
+}
+
+.fa-tripadvisor:before {
+    color: #fff;
+    font-size: 30px;
+    padding: 5px;
+}

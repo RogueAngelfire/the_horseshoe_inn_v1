@@ -1,0 +1,74 @@
+[
+  {
+    "pk": 1,
+    "model": "services.category",
+    "fields": {
+      "name": "ala_carte_menu",
+      "friendly_name": "Ala Carte Menu"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "services.category",
+    "fields": {
+      "name": "double",
+      "friendly_name": "Double"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "services.category",
+    "fields": {
+      "name": "self_catering",
+      "friendly_name": "Self Catering"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "services.category",
+    "fields": {
+      "name": "deals",
+      "friendly_name": "Deals"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "services.category",
+    "fields": {
+      "name": "essentials",
+      "friendly_name": "Essentials"
+    }
+  },
+  {
+    "pk": 6,
+    "model": "services.category",
+    "fields": {
+      "name": "starters",
+      "friendly_name": "Starters"
+    }
+  },
+  {
+    "pk": 7,
+    "model": "services.category",
+    "fields": {
+      "name": "twin",
+      "friendly_name": "Twin"
+    }
+  },
+  {
+    "pk": 8,
+    "model": "services.category",
+    "fields": {
+      "name": "special_offers",
+      "friendly_name": "Special Offers"
+    }
+  },
+  {
+    "pk": 9,
+    "model": "services.category",
+    "fields": {
+      "name": "mains",
+      "friendly_name": "Mains"
+    }
+  }
+]

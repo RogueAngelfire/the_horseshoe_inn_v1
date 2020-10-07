@@ -9,24 +9,29 @@ This is a genuine requested website and will be used once submitted for assement
 that I will require to use a branch should any urgent updates be required.
 
 With all the drama good and bad, Paul and Toni have experienced along the way, they have gained media attention
-from Channel 5 who are now making a documentary of the pub. Paul and I had discussed could 
-potentially give my career some exposure also. 
+from Channel 5 who are now making a documentary of the pub. Paul and I had discussed this landmark assignment could 
+potentially give my career some exposure at the same time freeing his time on people wanting to book rooms and view
+constantly updated menu items. 
 
 I therefore need to call on all my strengths and work hard on my weakness in delivering a high scoring assignment 
-that I can and more importantly my friend can use to benifit and take a lot of hard work out of his business.
+that I can and just as importantly provide to my my friends that can use to benifit and take a lot of valuable time out of their business.
 
 If the documentary proves popular The Horseshoe Inn will require a fresh and inviting website that is not over
-complicated and easy to navigate with a secure but easy booking system.
+complicated and easy to navigate with a secure but easy booking system. Which provides a secure account to the customer
+to update their booking. Obviously I have to also protect the client aswell as a late cancellation will cause finacial issues
+so deposits of percentage of costs will have to be deducted from late cancellations for example. I also have to be aware
+of stock control as there is only 5 rooms and self catering out building that requires to only be available once during
+a day between for instance 2pm until 10:30pm the following day.
 
-The hospitallity industry has suffered like many in 2020 and needs a boost. It will also have key Information
-of updates to current rules and regulating and a website with social media links where immediate update are not
+The Additional information such as a Menu page and what to do in the area may appeal to visitor to stay longer benefiting
+the establishment.
+
+As you are aware the hospitallity industry has suffered like many individuals and businessess in 2020 and needs a boost. 
+With the issues of 2020 this will also require and have key Information of updates to current rules and regulating and a website with social media links where immediate update are not
 possible on the website.
 
 I'd like to think that this website is helping a commuinty and repair the tourism and hospitallity sector that has suffered
 possibly irreparable damage in 2020 in the UK with thousands of closures and job losses.
-
-Additional information such as a Menu page and what to do in the area may appeal to visitor to stay longer benefiting
-the establishment.
 
 Early cancellation will be refunded with bookings cancelled within 48 hours will lose a deposit and 24 hours full amount.
 
@@ -80,9 +85,14 @@ Terms & Conditions and a Covid-19 public information for rules and regulations
 
 # Defensive Design
 
+THE TESTING TO CATCH ISSUES
+
 ## Layout and Visual Impact:
 
 # Responsive Design
+
+I have as required taken the mobile first approach as required and a common practise in all assignments throughout my course.
+I have relied on the bootstrap technologies to achieve this.
 
 # Image Presentation
 
