@@ -23,6 +23,14 @@ body {
     text-transform: uppercase;
 }
 
+#logo {
+     width: 15%;
+    padding: 4px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .main-logo-link {
     width: fit-content;
 }
@@ -109,5 +117,11 @@ h1.display-4 {
 .fa-tripadvisor:before {
     color: #fff;
     font-size: 30px;
+    padding: 5px;
+}
+
+.fa-phone-alt:before {
+    color: #fff;
+    font-size: 20px;
     padding: 5px;
 }
