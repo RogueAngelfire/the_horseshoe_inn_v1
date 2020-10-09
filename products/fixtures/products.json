@@ -1,74 +1,86 @@
 [
   {
     "pk": 1,
-    "model": "services.category",
+    "model": "products.product",
     "fields": {
-      "name": "ala_carte_menu",
-      "friendly_name": "Ala Carte Menu"
+      "sku": "r1",
+      "name": "Room 1",
+      "description": "Cosy Room 1",
+      "price": 65.00,
+      "category": 6,
+      "rating": 4.6,
+      "image_url": "horseshoe_inn/media/noimage.png",
+      "image": "horseshoe_inn/media/noimage.png"
     }
   },
   {
     "pk": 2,
-    "model": "services.category",
+    "model": "products.product",
     "fields": {
-      "name": "double",
-      "friendly_name": "Double"
+      "sku": "r2",
+      "name": "Room 2",
+      "description": "Cosy Room 2",
+      "price": 65.00,
+      "category": 4,
+      "rating": 4.6,
+      "image_url": "horseshoe_inn/media/noimage.png",
+      "image": "horseshoe_inn/media/noimage.png"
     }
   },
   {
     "pk": 3,
-    "model": "services.category",
+    "model": "products.product",
     "fields": {
-      "name": "self_catering",
-      "friendly_name": "Self Catering"
+      "sku": "r3",
+      "name": "Room 3",
+      "description": "Cosy Room 3",
+      "price": 65.00,
+      "category": 2,
+      "rating": 4.7,
+      "image_url": "horseshoe_inn/media/noimage.png",
+      "image": "horseshoe_inn/media/noimage.png"
     }
   },
   {
     "pk": 4,
-    "model": "services.category",
+    "model": "products.product",
     "fields": {
-      "name": "deals",
-      "friendly_name": "Deals"
+      "sku": "r4",
+      "name": "Room 4",
+      "description": "Cosy Room 4",
+      "price": 65.00,
+      "category": 7,
+      "rating": 3,
+      "image_url": "horseshoe_inn/media/noimage.png",
+      "image": "horseshoe_inn/media/noimage.png"
     }
   },
   {
     "pk": 5,
-    "model": "services.category",
+    "model": "products.product",
     "fields": {
-      "name": "essentials",
-      "friendly_name": "Essentials"
+      "sku": "r5",
+      "name": "Room 5",
+      "description": "Cosy Room 5",
+      "price": 65.00,
+      "category": 7,
+      "rating": 5,
+      "image_url": "horseshoe_inn/media/noimage.png",
+      "image": "horseshoe_inn/media/noimage.png"
     }
   },
   {
     "pk": 6,
-    "model": "services.category",
+    "model": "products.product",
     "fields": {
-      "name": "starters",
-      "friendly_name": "Starters"
-    }
-  },
-  {
-    "pk": 7,
-    "model": "services.category",
-    "fields": {
-      "name": "twin",
-      "friendly_name": "Twin"
-    }
-  },
-  {
-    "pk": 8,
-    "model": "services.category",
-    "fields": {
-      "name": "special_offers",
-      "friendly_name": "Special Offers"
-    }
-  },
-  {
-    "pk": 9,
-    "model": "services.category",
-    "fields": {
-      "name": "mains",
-      "friendly_name": "Mains"
+      "sku": "ra",
+      "name": "Annex",
+      "description": "The Posh Annex",
+      "price": 30.00,
+      "category": 8,
+      "rating": 5,
+      "image_url": "horseshoe_inn/media/noimage.png",
+      "image": "horseshoe_inn/media/noimage.png"
     }
   }
 ]
