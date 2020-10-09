@@ -9,8 +9,8 @@
       "price": 65.00,
       "category": 6,
       "rating": 4.6,
-      "image_url": "horseshoe_inn/media/noimage.png",
-      "image": "horseshoe_inn/media/noimage.png"
+      "image_url": "media/noimage.png",
+      "image": "media/noimage.png"
     }
   },
   {
@@ -23,8 +23,8 @@
       "price": 65.00,
       "category": 4,
       "rating": 4.6,
-      "image_url": "horseshoe_inn/media/noimage.png",
-      "image": "horseshoe_inn/media/noimage.png"
+      "image_url": "media/noimage.png",
+      "image": "media/noimage.png"
     }
   },
   {
@@ -37,8 +37,8 @@
       "price": 65.00,
       "category": 2,
       "rating": 4.7,
-      "image_url": "horseshoe_inn/media/noimage.png",
-      "image": "horseshoe_inn/media/noimage.png"
+      "image_url": "media/noimage.png",
+      "image": "media/noimage.png"
     }
   },
   {
@@ -51,8 +51,8 @@
       "price": 65.00,
       "category": 7,
       "rating": 3,
-      "image_url": "horseshoe_inn/media/noimage.png",
-      "image": "horseshoe_inn/media/noimage.png"
+      "image_url": "media/noimage.png",
+      "image": "media/noimage.png"
     }
   },
   {
@@ -65,8 +65,8 @@
       "price": 65.00,
       "category": 7,
       "rating": 5,
-      "image_url": "horseshoe_inn/media/noimage.png",
-      "image": "horseshoe_inn/media/noimage.png"
+      "image_url": "media/noimage.png",
+      "image": "media/noimage.png"
     }
   },
   {
@@ -79,8 +79,8 @@
       "price": 30.00,
       "category": 8,
       "rating": 5,
-      "image_url": "horseshoe_inn/media/noimage.png",
-      "image": "horseshoe_inn/media/noimage.png"
+      "image_url": "media/noimage.png",
+      "image": "media/noimage.png"
     }
   }
 ]
