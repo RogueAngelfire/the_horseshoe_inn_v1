@@ -9,6 +9,7 @@ def all_products(request):
     """ A view to show all product, including sorting. Note Search is disabled """
 
     products = Product.objects.all()
+    query = None
 
     """ Search bar remove if you decide not to use one """
 
@@ -16,8 +17,11 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                message.error(request, "You didn't enter any search criterial")
+                messages.error(request, "You didn't enter any search criterial")
                 return redirect(reverse('products'))
+
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            products -products.filter(queries)
 
     context = {
         'products': products,
