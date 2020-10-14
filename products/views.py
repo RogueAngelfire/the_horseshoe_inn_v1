@@ -1,4 +1,6 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib import messages
+from django.db.models import Q
 from .models import Product
 
 # Create your views here.
@@ -7,6 +9,15 @@ def all_products(request):
     """ A view to show all product, including sorting. Note Search is disabled """
 
     products = Product.objects.all()
+
+    """ Search bar remove if you decide not to use one """
+
+    if request.GET:
+        if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                message.error(request, "You didn't enter any search criterial")
+                return redirect(reverse('products'))
 
     context = {
         'products': products,
