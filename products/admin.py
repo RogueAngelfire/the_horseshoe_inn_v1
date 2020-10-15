@@ -40,6 +40,8 @@ class RoomAdmin(admin.ModelAdmin):
         'image',
     )
 
+    booking = ('room_number',)
+
 
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)

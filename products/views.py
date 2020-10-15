@@ -6,7 +6,9 @@ from .models import Product
 # Create your views here.
 
 def all_products(request):
-    """ A view to show all product, including sorting. Note Search is disabled """
+
+
+    """ A view to show all product, including sorting. Note Search is disabled adjust comment if reinstated"""
 
     products = Product.objects.all()
     query = None
@@ -36,7 +38,7 @@ def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
 
     context = {
-        'product': products,
+        'product': product,
     }
 
     return render(request, 'products/product_detail.html', context)
