@@ -34,8 +34,9 @@ class Product(models.Model):
 
 class Room(models.Model):
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
-    event_dates = models.CharField(max_length=250)
+    event_dates = models.CharField(max_length=254)
     number_available = models.IntegerField(default=0)
     is_available = models.BooleanField(default=True)
     date = models.DateTimeField(auto_now_add=True)
