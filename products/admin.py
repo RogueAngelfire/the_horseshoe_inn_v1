@@ -23,8 +23,6 @@ class CategoryAdmin(admin.ModelAdmin):
         'name',
     )
 
-    """ Added following class 15/10/20 to all rooms and date booking"""
-
 
 class RoomAdmin(admin.ModelAdmin):
     list_display = (
