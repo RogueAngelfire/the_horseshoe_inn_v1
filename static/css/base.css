@@ -102,6 +102,12 @@ body {
     }
 }
 
+/* -------------------------------- products cards */
+
+.card-footer, .card-body {
+    background: #b6d7a8 !important;
+}
+
 /* This pads out the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
