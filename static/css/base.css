@@ -78,6 +78,10 @@ body {
     z-index: -1;
 }
 
+#page_title {
+    color:#b2b2ab !important;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -102,10 +106,23 @@ body {
     }
 }
 
+/* padded the top when navbar is collapsed on mobile */
+
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+}
+
 /* -------------------------------- products cards */
 
 .card-footer, .card-body {
     background: #b6d7a8 !important;
+    padding: 4px;
 }
 
 /* This pads out the top a bit when navbar is collapsed on mobile */
