@@ -23,6 +23,7 @@ class Room(models.Model):
     event_dates = models.CharField(max_length=254)
     number_available = models.IntegerField(default=0)
     is_available = models.BooleanField(default=True)
+    require_breakfast = models.BooleanField(default=True)
     date = models.DateTimeField(auto_now_add=True)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
