@@ -1,7 +1,25 @@
 from django.contrib import admin
-from .models import Product, Category, Room
+from .models import Room, Product, Category
 
 # Register your models here.
+
+
+class RoomAdmin(admin.ModelAdmin):
+    list_display = (
+        'name',
+        'event_dates',
+        'number_available',
+        'is_available',
+        'require_breakfast',
+        'date',
+        'description',
+        'price',
+        'rating',
+        'image_url',
+        'image',
+    )
+
+    booking = ('room_number',)
 
 
 class ProductAdmin(admin.ModelAdmin):
@@ -24,23 +42,7 @@ class CategoryAdmin(admin.ModelAdmin):
     )
 
 
-class RoomAdmin(admin.ModelAdmin):
-    list_display = (
-        'name',
-        'event_dates',
-        'number_available',
-        'is_available',
-        'date',
-        'description',
-        'price',
-        'rating',
-        'image_url',
-        'image',
-    )
-
-    booking = ('room_number',)
-
-
+admin.site.register(Room, RoomAdmin)
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Category, CategoryAdmin)
-admin.site.register(Room, RoomAdmin)
+
