@@ -119,6 +119,13 @@ body {
     }
 }
 
+/* -------------------------------- Product Details */
+
+.product-details-container {
+    background: #b6d7a8;
+    padding: 4px;
+}
+
 /* -------------------------------- Footer */
 
 footer.page-footer {
