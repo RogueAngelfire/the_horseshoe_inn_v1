@@ -17,6 +17,7 @@
                 Menu
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="menu-link">
+                <a href="{% url 'products' %}?category=ala_carte_menu; starters; mains; desserts" class="dropdown-item">All Menu Items</a>
                 <a href="{% url 'products' %}?category=ala_carte_menu" class="dropdown-item">Ala Carte Menu</a>
                 <a href="{% url 'products' %}?category=starters" class="dropdown-item">Starters</a>
                 <a href="{% url 'products' %}?category=mains" class="dropdown-item">Mains</a>
@@ -32,7 +33,7 @@
                 <a href="" class="dropdown-item">Double </a>
                 <a href="" class="dropdown-item">Twin</a>
                 <a href="" class="dropdown-item">Self Catering</a>
-                <a href="" class="dropdown-item">All Rooms</a>
+                <a href="{% url 'rooms' %}" class="dropdown-item">All Rooms</a>
             </div>
         </li>
 
@@ -41,7 +42,7 @@
                 Contact
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="contact-link">
-                <a href="" class="dropdown-item">Contact us</a>
+                <a href="{% url 'contact' %}" class="dropdown-item">Contact us</a>
                 <a href="" class="dropdown-item">Special Offers</a>
                 <a href="" class="dropdown-item">Events</a>
                 <a href="" class="dropdown-item">Public information</a>
