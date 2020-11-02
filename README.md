@@ -209,6 +209,18 @@ and take proffessional pictures of the establishment. My cut off day for the ass
 however, I hope to submit the assignemt around the 1st November to allow me to assist other customers 
 and clients I have gathered.
 
+03/11/20
+With the delay in images I took a trip to Scotland to get these images while Scotlands hospitality industry
+had been closed to public houses. However there was issues with gettting these images as Paul and Toni decided
+to decorate the rooms for letting. Therefore what I went therefore I could not achieve. I wont lie I was disapointed
+and possible angry as this has proven expensive and time consuming and then being overwhelmed with guilt as could have
+attended my auntie and God Mothers funeral. I have to live with these decisions furthermore, I do understand Paul 
+and Toni's reasoning but maybe a little communication on their behalf would have helped us both achiving our desired 
+goals or not.
+Prior to all these the Website meeting we had went really well but they decided they want a darker green colour
+for the website. I had already decided that the green colour already being used wouldnt work for smaller devices
+and will therefore see where I can improve this but first I need to fix the functionality of the website first.
+
 # Data store integration
 
 # Deployment implementation
