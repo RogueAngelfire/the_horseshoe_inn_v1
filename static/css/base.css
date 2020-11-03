@@ -82,9 +82,11 @@ body {
     color:#b2b2ab !important;
 }
 
+/* -------------------------------- product badges */
+
 a.category-badge > span.badge:hover {
-    background: #212529 !important;
-    color: #fff !important;
+    background: #b6d7a8 !important;
+    color: #b2b2ab !important;
 }
 
 /* -------------------------------- Media Queries */
