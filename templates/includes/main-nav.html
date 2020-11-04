@@ -17,11 +17,11 @@
                 Menu
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="menu-link">
-                <a href="{% url 'products' %}?category=ala_carte_menu, starters, mains, desserts" class="dropdown-item">All Menu Items</a>
-                <a href="{% url 'products' %}?category=ala_carte_menu" class="dropdown-item">Ala Carte Menu</a>
-                <a href="{% url 'products' %}?category=starters" class="dropdown-item">Starters</a>
-                <a href="{% url 'products' %}?category=mains" class="dropdown-item">Mains</a>
-                <a href="{% url 'products' %}?category=desserts" class="dropdown-item">Desserts</a>
+                <a href="{% url 'menu' %}?category=ala_carte_menu, starters, mains, desserts" class="dropdown-item">All Menu Items</a>
+                <a href="{% url 'menu' %}?category=ala_carte_menu" class="dropdown-item">Ala Carte Menu</a>
+                <a href="{% url 'menu' %}?category=starters" class="dropdown-item">Starters</a>
+                <a href="{% url 'menu' %}?category=mains" class="dropdown-item">Mains</a>
+                <a href="{% url 'menu' %}?category=desserts" class="dropdown-item">Desserts</a>
             </div>
         </li>
 
@@ -30,9 +30,9 @@
                 Accommodation
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="accomadation-link"> <!-- aria labels need adjusting -->
-                <a href="" class="dropdown-item">Double </a>
-                <a href="" class="dropdown-item">Twin</a>
-                <a href="" class="dropdown-item">Self Catering</a>
+                <a href="{% url 'rooms' %}" class="dropdown-item">Double </a>
+                <a href="{% url 'rooms' %}" class="dropdown-item">Twin</a>
+                <a href="{% url 'rooms' %}" class="dropdown-item">Self Catering</a>
                 <a href="{% url 'rooms' %}" class="dropdown-item">All Rooms</a>
             </div>
         </li>
@@ -43,9 +43,9 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="contact-link">
                 <a href="{% url 'contact' %}" class="dropdown-item">Contact us</a>
-                <a href="" class="dropdown-item">Special Offers</a>
-                <a href="" class="dropdown-item">Events</a>
-                <a href="" class="dropdown-item">Public information</a>
+                <a href="{% url 'special_offers' %}" class="dropdown-item">Special Offers</a>
+                <a href="{% url 'events' %}" class="dropdown-item">Events</a>
+                <a href="{% url 'information' %}" class="dropdown-item">Public information</a>
             </div>
         </li>
     </ul>

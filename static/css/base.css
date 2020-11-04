@@ -154,13 +154,10 @@ a.category-badge > span.badge:hover {
 
 footer.page-footer {
     background-color: #b6d7a8;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 10px;
-    position: sticky;
-    position: -webkit-sticky;
-    position: -moz-sticky;
-    position: -o-sticky
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width:100%;
 }
 
 /* ------------------------ Booking Header */
