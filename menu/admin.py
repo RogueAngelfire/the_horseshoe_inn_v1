@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Menu
+from .models import Menu, Product
 # Register your models here.
 
 """ code didn't work
@@ -21,4 +21,5 @@ class RoomAdmin(admin.ModelAdmin):
     booking = ('room_number',)
     )
 """
+admin.site.register(Product)
 admin.site.register(Menu)
