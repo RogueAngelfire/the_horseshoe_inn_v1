@@ -1,25 +1,22 @@
 from django.contrib import admin
-from .models import Menu, Product
+from .models import Menu, Category
+
 # Register your models here.
 
-""" code didn't work
-class RoomAdmin(admin.ModelAdmin):
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = (
+        'friendly_name',
+        'name',
+    )
+
+class MenuAdmin(admin.ModelAdmin):
     list_display = (
         'name',
-        'event_dates',
-        'number_available',
-        'is_available',
-        'require_breakfast',
-        'date',
-        'description',
+        'category',
         'price',
         'rating',
-        'image_url',
         'image',
     )
 
-    booking = ('room_number',)
-    )
-"""
-admin.site.register(Product)
-admin.site.register(Menu)
+admin.site.register(Category, CategoryAdmin)
+admin.site.register(Menu, MenuAdmin)

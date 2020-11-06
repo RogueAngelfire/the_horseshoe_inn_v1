@@ -2,10 +2,10 @@ from django.db import models
 
 # Create your models here.
 
-class Product(models.Model):
+class Category(models.Model):
 
     class Meta:
-        verbose_name_plural = 'Products'
+        verbose_name_plural = 'Categories'
 
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
@@ -18,7 +18,7 @@ class Product(models.Model):
 
     
 class Menu(models.Model):
-    product = models.ForeignKey('product', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey('category', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
     description = models.TextField(default="")
     price = models.DecimalField(default="0", max_digits=6, decimal_places=2)

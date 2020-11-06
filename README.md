@@ -227,4 +227,11 @@ and will therefore see where I can improve this but first I need to fix the func
 
 # Deployment write-up
 
- 
+# Media
+
+# Credits and Achnoledgements
+
+I would like to express my eternal gratitute to Brian Macharia for being a great mentor and advisor for this and
+my previous assignments. I hope our paths cross again it has been a true honour to be your padiwan.
+
+Thank you to Johann Alberts at the code institute for allowing me to have a greater understanding of Models.
