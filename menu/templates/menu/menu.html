@@ -22,15 +22,15 @@
             <div class="product-container col-10 offset-1">
                 <div class="row mt-1 mb-2"></div>
                 <div class="row">
-                    {% for menu_item in menu_items %}
+                    {% for menu_item in menu %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
                                 {% if menu_item.image %}
-                                <a href="{% url 'product_detail' product.id %}">
+                                <a href="{% url 'product_detail' menu_item.id %}">
                                     <img class="card-img-top img-fluid" src="{{ menu_item.image.url }}" alt="{{ menu_item.name }}">
                                 </a>
                                 {% else %}
-                                <a href="{% url 'product_detail' product.id %}">
+                                <a href="{% url 'product_detail' menu_item.id %}">
                                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ menu_item.name }}">
                                 </a>
                                 {% endif %}

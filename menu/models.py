@@ -16,7 +16,7 @@ class Category(models.Model):
     def get_friendly_name(self):
         return self.friendly_name
 
-    
+  
 class Menu(models.Model):
     category = models.ForeignKey('category', null=True, blank=True, on_delete=models.SET_NULL)
     name = models.CharField(max_length=254)
