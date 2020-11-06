@@ -3,26 +3,23 @@ from .models import Room, Category
 
 # Register your models here.
 
-""" code didn't work
 class RoomAdmin(admin.ModelAdmin):
     list_display = (
+        'category',
         'name',
-        'event_dates',
-        'number_available',
-        'is_available',
-        'require_breakfast',
-        'date',
         'description',
         'price',
         'rating',
-        'image_url',
         'image',
     )
 
-    booking = ('room_number',)
-    )
-"""
-admin.site.register(Room)
-admin.site.register(Category)
 
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = (
+        'friendly_name',
+        'name',
+    )
+
+admin.site.register(Room, RoomAdmin)
+admin.site.register(Category, CategoryAdmin)
 
