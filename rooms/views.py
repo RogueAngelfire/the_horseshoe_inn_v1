@@ -4,12 +4,19 @@ from .models import Room, Category
 # Create your views here.
 
 def rooms(request):
-    """ A view to return the accomadation page """
+    """ A view to return the all the accomadation page """
 
-    room = Room.objects.all()
+    rooms = Room.objects.all()
+    category = None
+
+    if request.GET:
+        if 'category' in request.GET:
+            categories = request.GET['category'].split(',')
+            rooms = rooms.filter(category__name__in=categories)
+            categories = category.object.filter(name__in=categories)
 
     context = {
-        'rooms': room,
+        'rooms': rooms,
     }
 
     return render(request, 'rooms/rooms.html', context)
@@ -17,10 +24,11 @@ def rooms(request):
 def room_detail(request, room):
     """ A view to show individual room details """
 
-    room = get_object_or_404(Room, pk=room_id)
+    room = get_object_or_404(Category, Room, pk=room_id)
 
     context = {
         'room': room,
     }
 
     return render(request, 'rooms/room_detail.html', context)
+
