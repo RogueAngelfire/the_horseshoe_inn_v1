@@ -22,4 +22,3 @@ class CategoryAdmin(admin.ModelAdmin):
 
 admin.site.register(Room, RoomAdmin)
 admin.site.register(Category, CategoryAdmin)
-
