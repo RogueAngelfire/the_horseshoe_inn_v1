@@ -1,6 +1,3 @@
-{% extends "base.html" %}
-{% load static %}
-
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -15,7 +12,7 @@
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                 <div class="image-container my-5">
-                    {% if rooms.image %}
+                    {% if product.image %}
                         <a href="{{ room.image.url }}" target="_blank">
                             <img class="card-img-top img-fluid" src="{{ room.image.url }}" alt="{{ room.name }}">
                         </a>
@@ -26,10 +23,17 @@
                     {% endif %}
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4"></div>
-                <div class="room-details-container mb-5 mt-md-5"> <!--Room was product-->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="room-details-container mb-5 mt-md-5">
                     <p class="mb-0">{{ room.name }}</p>
-                    <p class="lead mb-0 text-left font-weight-bold">${{ room.price }}</p>
+                    <p class="lead mb-0 text-left font-weight-bold">£{{ room.price }}</p>
+                    {% if product.category %}
+                    <p class="small mt-1 mb-0">
+                        <a class="text-muted" href="{% url 'rooms' %}?category={{ category.room.name }}">
+                            <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                        </a>
+                    </p>
+                    {% endif %}
                     {% if room.rating %}
                         <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ room.rating }} / 5</small>
                     {% else %}
