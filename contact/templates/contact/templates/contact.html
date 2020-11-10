@@ -16,6 +16,28 @@
             <div class="col text-center mt-3">
                 <h2 class="logo-font" id="page_title">Contact Us</h2>
                 <p style="color: #b2b2ab;"> We at the Horseshoe Inn are hear to listen to your comments requests and recommedations</p>
+                <section class="container-fluid contact contact-background-image" id="contact">
+        <div class="row bg-color-contact">
+            <div class="col-12 col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="col-12">
+                    <div class="center-align">
+                        <form onsubmit="return sendMail(this);">
+                            <input type="text" name="name" id="fullname" minlength="5" maxlength="15" class="form-control" placeholder="Name" pattern="^[a-zA-Z0-9]{5,15}$" required />
+                            <input type="email" name="email" id="emailaddress" minlength="5" maxlength="30" pattern="^[a-zA-Z0-9]{5,15}$" class="form-control" placeholder="Email" required />
+                            <textarea rows="5" name="projectsummary" id="projectsummary" minlength="10" maxlength="2000" class="form-control" placeholder="Add your message here!" required></textarea>
+                            <div class="form-row text-center">
+                                <div class="col s12 center-align">
+                                    <button type="submit" class="btn light-green btn-secondary center-align">Submit Request</button>
+
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
                 <hr class="w-50 mb-1">
             </div>
         </div>
