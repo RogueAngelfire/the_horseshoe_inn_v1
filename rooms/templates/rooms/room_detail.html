@@ -27,10 +27,10 @@
                 <div class="room-details-container mb-5 mt-md-5">
                     <p class="mb-0">{{ room.name }}</p>
                     <p class="lead mb-0 text-left font-weight-bold">£{{ room.price }}</p>
-                    {% if product.category %}
+                    {% if room.category %}
                     <p class="small mt-1 mb-0">
                         <a class="text-muted" href="{% url 'rooms' %}?category={{ category.room.name }}">
-                            <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                            <i class="fas fa-tag mr-1"></i>{{ room.category.friendly_name }}
                         </a>
                     </p>
                     {% endif %}

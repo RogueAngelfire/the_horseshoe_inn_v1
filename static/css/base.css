@@ -42,7 +42,7 @@ body {
 }
 
 .btn-black {
-    background: #b6d7a8;
+    background: #8fb180;
     color: white;
 }
 
@@ -52,7 +52,7 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #b6d7a8;
+    background: #8fb180;
     color: white;
 }
 
@@ -129,7 +129,7 @@ a.category-badge > span.badge:hover {
 /* -------------------------------- products cards */
 
 .card-footer, .card-body {
-    background: #b6d7a8 !important;
+    background: #2d541c !important;
     padding: 4px;
 }
 
@@ -154,7 +154,7 @@ a.category-badge > span.badge:hover {
 /* -------------------------------- Footer */
 
 footer.page-footer {
-    background-color: #b6d7a8;
+    background-color: #8fb180;
     position: absolute;
     left: 0;
     bottom: 0;
