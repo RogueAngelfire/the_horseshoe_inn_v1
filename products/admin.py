@@ -19,7 +19,7 @@ class RoomAdmin(admin.ModelAdmin):
         'image',
     )
 
-    booking = ('name',)
+    booking = ('room_number',)
 
 
 class ProductAdmin(admin.ModelAdmin):
