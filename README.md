@@ -154,10 +154,10 @@ security not putting SECRET_KEYS in wrong place using config vars in Heroku
 
 # Technologies Used
 
-* Django
-* Github
-* GitPod
-* Heroku
+* Django - https://www.djangoproject.com/
+* Github - https://github.com/
+* GitPod - https://www.gitpod.io/
+* Heroku - https://www.heroku.com/
 * Bootstrap - https://getbootstrap.com/
 * mdbootstrap - https://mdbootstrap.com/docs/jquery/navigation/footer/
 * Google Fonts - https://fonts.google.com/
