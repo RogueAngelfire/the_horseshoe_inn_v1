@@ -144,21 +144,17 @@ a.category-badge > span.badge:hover {
     }
 }
 
+/* -------------------------------- Ratings */
+
+small.text-muted {
+    color: gold !important;
+}
+
 /* -------------------------------- Product Details */
 
 .product-details-container {
     background: #b6d7a8;
     padding: 4px;
-}
-
-/* -------------------------------- Footer */
-
-footer.page-footer {
-    position: absolute;
-    bottom: 0;
-    width:100%;
-    left:0;
-    background-color: #8fb180;
 }
 
 /* ------------------------ Booking Header */
@@ -183,5 +179,15 @@ h1.display-4 {
     color: #fff;
     font-size: 20px;
     padding: 5px;
+}
+
+/* -------------------------------- Footer */
+
+footer.page-footer {
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    left:0;
+    background-color: #8fb180;
 }
 
