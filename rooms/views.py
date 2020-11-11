@@ -24,10 +24,10 @@ def rooms(request):
 
     return render(request, 'rooms/rooms.html', context)
 
-def room_detail(request, room):
+def room_detail(request, room_id):
     """ A view to show individual room details """
 
-    room = get_object_or_404(Category, Room, pk=room_id)
+    room = get_object_or_404(Room, pk=room_id)
 
     context = {
         'room': room,

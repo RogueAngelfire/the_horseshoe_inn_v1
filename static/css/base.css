@@ -154,11 +154,11 @@ a.category-badge > span.badge:hover {
 /* -------------------------------- Footer */
 
 footer.page-footer {
-    background-color: #8fb180;
     position: absolute;
-    left: 0;
     bottom: 0;
     width:100%;
+    left:0;
+    background-color: #8fb180;
 }
 
 /* ------------------------ Booking Header */
