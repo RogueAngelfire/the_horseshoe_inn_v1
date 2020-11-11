@@ -1,3 +1,6 @@
+{% extends "base.html" %}
+{% load static %}
+
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
@@ -12,7 +15,7 @@
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
                 <div class="image-container my-5">
-                    {% if product.image %}
+                    {% if room.image %}
                         <a href="{{ room.image.url }}" target="_blank">
                             <img class="card-img-top img-fluid" src="{{ room.image.url }}" alt="{{ room.name }}">
                         </a>
@@ -24,7 +27,7 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="room-details-container mb-5 mt-md-5">
+                <div class="product-details-container mb-5 mt-md-5">
                     <p class="mb-0">{{ room.name }}</p>
                     <p class="lead mb-0 text-left font-weight-bold">£{{ room.price }}</p>
                     {% if room.category %}
