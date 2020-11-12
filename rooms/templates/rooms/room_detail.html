@@ -43,6 +43,21 @@
                         <small class="text-muted">No Rating</small>
                     {% endif %}
                     <p class="mt-3">{{ room.description }}</p>
+                    <p> Select Number of Adults </p>
+                    <p>
+                    Select Check in Date:
+                    </p>
+                        <div id="date-picker-checkin" class="md-form md-outline input-with-post-icon datepicker" inline="true">
+                            <input placeholder="Select date" type="text" id="checkin" class="form-control">
+                                <label for="example">Try me...</label>
+                            <i class="fas fa-calendar input-prefix"></i>
+                        </div>
+                    <p> Select Check out Date </p>
+                    <div id="date-picker-checkout" class="md-form md-outline input-with-post-icon datepicker" inline="true">
+                            <input placeholder="Select date" type="text" id="checkout" class="form-control">
+                                <label for="example">Try me...</label>
+                            <i class="fas fa-calendar input-prefix"></i>
+                        </div>
                 </div>
             </div>
         </div>
