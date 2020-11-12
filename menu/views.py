@@ -8,6 +8,7 @@ def menu(request):
 
     menu = Menu.objects.all()
     category = None
+    
     if request.GET:
         if 'category' in request.GET:
             print(f"categories in the request: {request.GET['category']}")
@@ -15,7 +16,7 @@ def menu(request):
             print(f"categories are: {categories}")
             menu = menu.filter(category__name__in=categories)
             print(f"menu are: {menu}")
-            category = Category.objects.filter(name__in=categories)
+            categories = Category.objects.filter(name__in=categories)
 
 
     context = {
@@ -31,6 +32,7 @@ def menu_detail(request, menu_id):
 
     context = {
         'menu': menu,
+        'current_categories': categories,
     }
 
     return render(request, 'menu/menu_detail.html', context)
