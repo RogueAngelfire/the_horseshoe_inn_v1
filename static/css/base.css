@@ -157,6 +157,13 @@ small.text-muted {
     padding: 4px;
 }
 
+/* -------------------------------- Product Details in room_details */
+
+ #canvas {
+    background: #90b17f;
+    padding: 4px;
+}
+
 /* ------------------------ Booking Header */
 
 h1.display-4 {

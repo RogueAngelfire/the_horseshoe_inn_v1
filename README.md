@@ -4,7 +4,7 @@
 
 # Project Purpose
 
-### This is a real pub my friend Paul and his partner Toni purchased in July 2020 amid a pandemic
+### This is a real pub my friend Paul and his partner Toni purchased on 2nd June and moved in on 16th July 2020 amid a pandemic
 This is a genuine requested website and will be used once submitted for assement and I am aware
 that I will require to use a branch should any urgent updates be required.
 
