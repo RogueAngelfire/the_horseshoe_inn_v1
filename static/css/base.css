@@ -181,10 +181,6 @@ input.datepicker-checkin {
     color: #6c757d;
 }
 
-input.datepicker-checkin.icon {
-    color: #6c757d !important;
-}
-
 input.datepicker-checkout {
     color: #6c757d;
 }
@@ -196,8 +192,12 @@ input.btn.btn-success {
     margin-top: 10px;
 }
 
+input.btn.btn-success:hover {
+    background-color: #b6d7a8;
+}
 
-/* ------------------------ Booking Header */
+
+/* ------------------------ Social Media and Contact Links */
 
 h1.display-4 {
     margin: 50px;
