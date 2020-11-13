@@ -222,6 +222,11 @@ input.btn.btn-success:hover {
     color:#fff;
 }
 
+#contact_phone,
+#contact_mobile {
+    color: #2d541c;
+}
+
 /* ------------------------ Social Media and Contact Links */
 
 h1.display-4 {
