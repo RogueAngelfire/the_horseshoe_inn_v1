@@ -160,9 +160,42 @@ small.text-muted {
 /* -------------------------------- Product Details in room_details */
 
  #canvas {
-    background: #90b17f;
+    background: #fff;
+    color: #6c757d;
     padding: 4px;
 }
+
+/* -------------------------------- + and - buttons */
+
+.increment-qty {
+    background-color: #2d541c;
+}
+
+.decrement-qty {
+    background-color: #2d541c;
+}
+
+/* -------------------------------- Date Pickers */
+
+input.datepicker-checkin {
+    color: #6c757d;
+}
+
+input.datepicker-checkin.icon {
+    color: #6c757d !important;
+}
+
+input.datepicker-checkout {
+    color: #6c757d;
+}
+
+/* -------------------------------- Booking Button */
+
+input.btn.btn-success {
+    background-color: #2d541c;
+    margin-top: 10px;
+}
+
 
 /* ------------------------ Booking Header */
 
