@@ -7,7 +7,8 @@ def menu(request):
     """ A view to return the menu page """
 
     menu = Menu.objects.all()
-    category = None
+    categories = None
+
     if request.GET:
         if 'category' in request.GET:
             print(f"categories in the request: {request.GET['category']}")
@@ -20,6 +21,7 @@ def menu(request):
 
     context = {
         'menu': menu,
+        'category':categories,
     }
 
     return render(request, 'menu/menu.html', context)
@@ -31,7 +33,6 @@ def menu_detail(request, menu_id):
 
     context = {
         'menu': menu,
-        
     }
 
     return render(request, 'menu/menu_detail.html', context)
