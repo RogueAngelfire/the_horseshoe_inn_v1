@@ -90,6 +90,14 @@ a.category-badge > span.badge:hover {
     color: #b2b2ab !important;
 }
 
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 250px;
+    right: 10px;
+}
+
 .btt-link {
     cursor: pointer;
 }
