@@ -11,17 +11,14 @@ def menu(request):
 
     if request.GET:
         if 'category' in request.GET:
-            print(f"categories in the request: {request.GET['category']}")
             categories = request.GET['category'].split(',')
-            print(f"categories are: {categories}")
             menu = menu.filter(category__name__in=categories)
-            print(f"menu are: {menu}")
             categories = Category.objects.filter(name__in=categories)
 
 
     context = {
         'menu': menu,
-        'category':categories,
+        'current_categories': categories,
     }
 
     return render(request, 'menu/menu.html', context)
