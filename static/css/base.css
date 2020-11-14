@@ -90,6 +90,10 @@ a.category-badge > span.badge:hover {
     color: #b2b2ab !important;
 }
 
+.btt-link {
+    cursor: pointer;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
