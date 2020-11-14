@@ -154,18 +154,26 @@ security not putting SECRET_KEYS in wrong place using config vars in Heroku
 
 # Technologies Used
 
-* Django - https://www.djangoproject.com/
-* Github - https://github.com/
-* GitPod - https://www.gitpod.io/
-* Heroku - https://www.heroku.com/
-* Bootstrap - https://getbootstrap.com/
+* Django - https://www.djangoproject.com/ The Python Web framework used for full stack assignemt.
+* Github - https://github.com/ Where I stored my assignment.
+* GitPod - https://www.gitpod.io/ This is the developer used for the assignment.
+* Heroku - https://www.heroku.com/ The assingnment is hosted here as Python friendly.
+* Bootstrap - https://getbootstrap.com/ to aid with responsive development.
 * mdbootstrap - https://mdbootstrap.com/docs/jquery/navigation/footer/
-* Google Fonts - https://fonts.google.com/
-* What the font - https://www.myfonts.com/WhatTheFont/
-* Json Formatter - https://jsonformatter.org/
-* Code Pen - https://codepen.io/
-* Django Key Generator - https://miniwebtool.com/
-* Unsplash - https://unsplash.com/
+* Google Fonts - https://fonts.google.com/ The Fonts used for The Pubs main title.
+* What the font - https://www.myfonts.com/WhatTheFont/ I used this website to identify the Font Used on the fron of the pub.
+* Json Formatter - https://jsonformatter.org/ For improving script layout.
+* Code Pen - https://codepen.io/ I used this to practise snippets of code.
+* Repl.it - https://repl.it/ I also used this for seeing if snippets of code would work.
+* Django Key Generator - https://miniwebtool.com/ To renew SECRET_KEYS for greater security.
+* Unsplash - https://unsplash.com/ I used this to provide stock images when testing.
+* Photoshop - https://www.adobe.com/uk/products/photoshop.html  Used for The Horseshoe Inn Logo Design and the Favicon.
+* Balsamiq - https://balsamiq.com/ Used for the wireframes seen earlier in the project.
+* Stripe - https://stripe.com/en-gb Secure Payment System.
+* AWS S3 Bucket - https://aws.amazon.com/s3/ for storage of data and images in database.
+* Pillow - https://pypi.org/project/Pillow/2.2.1/ links images to the database.
+* PIP - https://pip.pypa.io/en/stable/ - Package management system.
+
 
 # Comments and Diary
 
@@ -235,4 +243,5 @@ and will therefore see where I can improve this but first I need to fix the func
 I would like to express my eternal gratitute to Brian Macharia for being a great mentor and advisor for this and
 my previous assignments. I hope our paths cross again it has been a true honour to be your padiwan.
 
-Thank you to Johann Alberts at the code institute for allowing me to have a greater understanding of Models.
+Thank you to Johann Alberts and Tim Nelson at the code institute for allowing me to have a greater understanding of Models
+and Views with this milestone assignemt.
