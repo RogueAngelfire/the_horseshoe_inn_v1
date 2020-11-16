@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'special_offers',
     'events',
     'information',
+    'bag',
 ]
 
 MIDDLEWARE = [
