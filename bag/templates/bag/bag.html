@@ -23,7 +23,9 @@
         <div class="row">
             <div class="col"></div>
                 {% if bag_items %}
-                    <div class="table-responsive rounded"></div>
+                    <div class="table-responsive rounded" style="color: #b2b2ab;">
+                        {{ bag_items }}
+                    </div>
                 {% else %}
                     <p class="lead mb-5" style="color: #b2b2ac;">No Rooms in Cart.</p>
                     <a href="{% url 'rooms' %}" class="btn btn-outline-black rounded-0 btn-lg">
