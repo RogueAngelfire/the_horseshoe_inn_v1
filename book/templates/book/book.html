@@ -22,7 +22,7 @@
 
         <div class="row">
             <div class="col"></div>
-                {% if bag_items %}
+                {% if book_items %}
                     <div class="table-responsive rounded" style="color: #b2b2ab;">
                         <table class="table table-sm table-border1">
                             <thread class="text-black">
@@ -34,7 +34,7 @@
                                     <th scope="col">Subtotal</th>
                                 </tr>
                             </thread>
-                            {% for item in bag_items %}
+                            {% for item in book_items %}
                                 <tr>
                                     <td class="p-3 w-25">
                                         <img class="img-fluid rounded" src="{{ item.room.image.url }}">
@@ -83,7 +83,7 @@
                                 </td>
                             </tr>
                         </table>
-                        {{ bag_items }}
+                        {{ book_items }}
                     </div>
                 {% else %}
                     <p class="lead mb-5" style="color: #b2b2ac;">No Rooms in Cart.</p>

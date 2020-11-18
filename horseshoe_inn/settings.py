@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'special_offers',
     'events',
     'information',
-    'bag',
+    'book',
 ]
 
 MIDDLEWARE = [
@@ -79,7 +79,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',  # Required by allauth
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'bag.contexts.bag_contents',
+                'book.contexts.book_contents',
             ],
         },
     },

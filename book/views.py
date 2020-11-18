@@ -4,22 +4,22 @@ from rooms.models import Room
 
 # Create your views here.
 
-def view_bag(request):
-    """ A view that renders the bag contents page """
+def view_book(request):
+    """ A view that renders the booking contents page """
 
-    return render(request, 'bag/bag.html')
+    return render(request, 'book/book.html')
 
-def add_to_bag(request, item_id):
+def add_to_book(request, item_id):
     """ Add a quantity of the specified rooms to the booking shopping bag """
 
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
-    bag = request.session.get('bag', {})
+    book = request.session.get('book', {})
 
-    if item_id in list(bag.keys()):
-        bag[item_id] += quantity
+    if item_id in list(book.keys()):
+        book[item_id] += quantity
     else:
-        bag[item_id] = quantity
+        book[item_id] = quantity
 
-    request.session['bag'] = bag
+    request.session['book'] = book
     return redirect(redirect_url)
