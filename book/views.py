@@ -22,23 +22,23 @@ def add_to_book(request, item_id):
     redirect_url = request.POST.get('redirect_url')
     book = request.session.get('book', {})
 
-    """ Remove if not require as size not required
-    if size:
-        if item_id in list(bag.keys()):
-            if size in bag[item_id]['items_by_size'].keys():
-                bag[item_id]['items_by_size'][size] += quantity
-            else:
-                bag[item_id]['items_by_size'][size] = quantity
-        else:
-            bag[item_id] = {'items_by_size': {size: quantity}}
-    else:
-        if item_id in list(bag.keys()):
-            bag[item_id] += quantity
-        else:
-            bag[item_id] = quantity
 
-    request.session['bag'] = bag
-    return redirect(redirect_url) """
+    if size:
+        if item_id in list(book.keys()):
+            if size in book[item_id]['items_by_size'].keys():
+                book[item_id]['items_by_size'][size] += quantity
+            else:
+                book[item_id]['items_by_size'][size] = quantity
+        else:
+            book[item_id] = {'items_by_size': {size: quantity}}
+    else:
+        if item_id in list(book.keys()):
+            book[item_id] += quantity
+        else:
+            book[item_id] = quantity
+
+    request.session['book'] = book
+    return redirect(redirect_url)
 
     if 'checkin_date' in request.POST:
         date = request.POST['checkin_date']
@@ -49,7 +49,7 @@ def add_to_book(request, item_id):
         if item_id in list(book.keys()):
             if date in book[item_id] ['items_by_date'].keys():
                 book[item_id]['items_by_date'][date]['number_guests'] += quantity
-                book[item_id]['items_by_date'][date]['number_of_nights'] += number_of_nights
+                book[item_id]['items_by_date'][date]['number_of_nights'] += checkin_date
                 messages.success(request, f'booking for arrival on {date.upper()} for {room.name} is confirmed')
             else:
                 book[item_id]['items_by_date'][date] = {}
