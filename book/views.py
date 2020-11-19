@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, HttpResponse
+from django.shortcuts import render, redirect, reverse, HttpResponse
 from django.shortcuts import get_object_or_404
 from django.contrib import messages
 from rooms.models import Room
@@ -22,6 +22,7 @@ def add_to_book(request, item_id):
     redirect_url = request.POST.get('redirect_url')
     book = request.session.get('book', {})
 
+    """ Remove if not require as size not required
     if size:
         if item_id in list(bag.keys()):
             if size in bag[item_id]['items_by_size'].keys():
@@ -37,11 +38,13 @@ def add_to_book(request, item_id):
             bag[item_id] = quantity
 
     request.session['bag'] = bag
-    return redirect(redirect_url)
+    return redirect(redirect_url) """
 
     if 'checkin_date' in request.POST:
         date = request.POST['checkin_date']
-        book = request.session.get('book', {})
+
+    book = request.session.get('book', {})
+    
     if date:
         if item_id in list(book.keys()):
             if date in book[item_id] ['items_by_date'].keys():
@@ -49,7 +52,7 @@ def add_to_book(request, item_id):
                 book[item_id]['items_by_date'][date]['number_of_nights'] += number_of_nights
                 messages.success(request, f'booking for arrival on {date.upper()} for {room.name} is confirmed')
             else:
-                book[item_id]['items_by_date'][date] ={}
+                book[item_id]['items_by_date'][date] = {}
                 book[item_id]['items_by_date'][date]['number_guests'] = quantity
                 book[item_id]['item_by_date'][date]['number_nights'] = number_of_nights
                 messages.success(request, f'Date added for {date.upper()} {room.name} to your booking')
@@ -94,3 +97,26 @@ def adjust_booking(request, item_id):
 
     request.session['book'] = book
     return redirect(reverse('view_book'))
+
+
+def remove_from_booking(request, item_id):
+    """Remove the item from the booking bag"""
+
+    try:
+        size = None
+        if 'room_size' in request.POST:
+            size = request.POST['room_size']
+        book = request.session.get('book', {})
+
+        if size:
+            del book[item_id]['items_by_size'][size]
+            if not book[item_id]['items_by_size']:
+                book.pop(item_id)
+        else:
+            book.pop(item_id)
+
+        request.session['book'] = book
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        return HttpResponse(status=500)

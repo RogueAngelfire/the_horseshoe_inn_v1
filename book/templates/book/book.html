@@ -75,7 +75,7 @@
                                             </div>
                                         </form>
                                         <a class="update-link text-info"><small>Update</small></a>
-                                        <a class="remove-item text-danger float-right" id="remove{{ item.item_id }}" data-room-size="{{ item.size }}"><small>Remove</small></a>
+                                        <a class="remove-item text-danger float-right" id="remove{{ item.item_id }}" data-room_size="{{ item.size }}"><small>Remove</small></a>
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">{{ item.room.price }}</p>
@@ -100,7 +100,7 @@
                                         <span class="icon">
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
-                                        <span class="text-uppercase">Add a Room</span>
+                                        <span class="text-uppercase">Back</span>
                                     </a>
                                     <a href="" class="btn btn-black rounded-0 btn-lg">
                                         <span class="text-uppercase">Secure Checkout</span>
@@ -141,9 +141,9 @@
     // Remove item and reload on click
     $('.remove-item').click(function(e) {
         var csrfToken = "{{ csrf_token }}";
-        var itemId = $(this).attr('id').split('remove_')[1];
+        var itemId = $(this).attr('id').split('remove')[1];
         var size = $(this).data('room_size');
-        var url = `/book/remove/${itemId}`;
+        var url = `/book/remove/${itemId}/`;
         var data = {'csrfmiddlewaretoken': csrfToken, 'room_size': size};
 
         $.post(url, data)
