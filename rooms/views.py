@@ -58,6 +58,7 @@ def rooms(request):
 
     return render(request, 'rooms/rooms.html', context)
 
+
 def room_detail(request, room_id):
     """ A view to show individual room details """
 
@@ -69,8 +70,8 @@ def room_detail(request, room_id):
 
     return render(request, 'rooms/room_detail.html', context)
 
-"""
    # Below is experiment code to function the Datepicker(s) 
+
 
 def checkin_date(request, item_id):
     # Add booking check in date
@@ -105,7 +106,6 @@ def checkin_date(request, item_id):
             book[item_id] = quantity
             messages.success(request, f'Added {room.name} to datepicker')
 
-
     request.session['datepicker_checkin'] = datepicker_checkin
-    return redirect(redirect_url) """
+    return redirect(redirect_url)
 
