@@ -25,7 +25,6 @@ def add_to_book(request, item_id):
             if date in book[item_id] ['items_by_date'].keys():
                 book[item_id]['items_by_date'][date]['number_guests'] += quantity
                 book[item_id]['items_by_date'][date]['number_of_nights'] += add_to_book
-                messages.success(request, f'booking for arrival on {date.upper()} for {room.name} is confirmed')
             else:
                 book[item_id]['items_by_date'][date] = {}
                 book[item_id]['items_by_date'][date]['number_guests'] = quantity
@@ -42,6 +41,8 @@ def add_to_book(request, item_id):
 
     request.session['book'] = book
     return redirect(redirect_url)
+
+    """ Remove size in testing as has no purpose """
 
     if size:
         if item_id in list(book.keys()):
@@ -67,9 +68,8 @@ def add_to_book(request, item_id):
 
 
 def adjust_booking(request, item_id):
-    """ Adjust the guest quantity """
+    """ Adjust the booking by adding and subtacting guests quantity """
 
-    room = get_object_or_404(Room, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     size = None
     if 'room_size' in request.POST:
@@ -79,19 +79,15 @@ def adjust_booking(request, item_id):
     if size:
         if quantity > 0:
             book[item_id]['items_by_size'][size] = quantity
-            messages.success(request, f'Updated room {size.upper()}{room.name} quantity to {book[item_id]["items_by_size"][size]}')
         else:
             del book[item_id]['items_by_size'][size]
             if not book[item_id]['items_by_size']:
                 book.pop(item_id)
-                messages.success(request, f'Removed Room {size.upper()} {room.name} from your booking')
     else:
         if quantity > 0:
             book[item_id] = quantity
-            messages.success(request, f'Removed Room {room.name} from your booking')
         else:
             book.pop(item_id)
-            messages.success(request, f'Removes {room.name} from your booking')
 
     request.session['book'] = book
     return redirect(reverse('view_book'))

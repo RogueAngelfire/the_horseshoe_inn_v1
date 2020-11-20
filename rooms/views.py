@@ -90,21 +90,16 @@ def checkin_date(request, item_id):
         if item_id in list(datepicker_checkin.keys()):
             if room_available in datepicker_checkin[item_id]['items_by_free'].keys():
                 datepicker_checkin[item_id]['items_are_available'][room_availale] += quantity
-                messages.success(request, f'Updated free {room_available.upper()} {room.name} {datepicker_checkin[item_id]["items_are_available"][availale]}')
             else:
                 datepicker_checkin[item_id]['items_are_available'][room_available] = quantity
-                messages.success(request, f'Added Room {room_available.upper()} {room.name} to booking calender')
         else:
             datepicker_checkin[item_id] = {'items_are_available': {room_availale: quantity}}
-            messages.success(request, f'Added Room {room_available.upper()} {room.name} to booking calender')
     else:
         if item_id in list(datepicker_checkin.keys()):
             datepicker_checkin[item_id] += quantity
-            messages.success
             (request, f'Updated {room.name} quantity to {datepicker_checkin[item_id]}')
         else:
             book[item_id] = quantity
-            messages.success(request, f'Added {room.name} to datepicker')
 
     request.session['datepicker_checkin'] = datepicker_checkin
     return redirect(redirect_url)

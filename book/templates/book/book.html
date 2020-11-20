@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load book_tools %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -47,7 +48,7 @@
                                         <p class="my-0">£{{ item.room.price }}</p> 
                                     </td>
                                     <td class="py-3">
-                                        <form class="form update-form" method="POST" action="">
+                                        <form class="form update-form" method="POST" action="{% url 'adjust_booking' item.item_id %}">
                                             {% csrf_token %}
                                             <div class="form-group">
                                                 <div class="input-group">
@@ -78,14 +79,13 @@
                                         <a class="remove-item text-danger float-right" id="remove{{ item.item_id }}" data-room_size="{{ item.size }}"><small>Remove</small></a>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">{{ item.room.price }}</p>
+                                        <p class="my-0">{{ item.room.price | calc_subtotal:item.quantity }}</p>
                                     </td>
                                 </tr>
                             {% endfor %}
                             <tr>
                                 <td colspan="5" class="pt-5 text-right">
-                                    <h6><strong>Bag Total: £{{ total|floatformat:2 }}</strong></h6>
-                                    <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
+                                    <h6><strong>Total: £{{ total|floatformat:2 }}</strong></h6>
                                     <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
                                     {% if free_delivery_delta > 0 %}
                                         <p class="mb-1 text-danger"><!--This will need to be removed but remains until fuction require removal-->
