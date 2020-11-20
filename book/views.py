@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse
 from django.shortcuts import get_object_or_404
 from django.contrib import messages
+
 from rooms.models import Room
 
 # Create your views here.
@@ -38,6 +39,7 @@ def add_to_book(request, item_id):
         book[item_id] += quantity
     else:
         book[item_id] = quantity
+        messages.success(request, f'Added {room.name} to your booking')
 
     request.session['book'] = book
     return redirect(redirect_url)
