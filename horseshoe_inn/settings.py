@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'events',
     'information',
     'book',
+    'checkout',
 ]
 
 MIDDLEWARE = [
