@@ -22,7 +22,7 @@ def rooms(request):
             sort = sortkey		
             if sortkey == 'name':		
                 sortkey = 'lower_name'		
-                products = products.annotate(lower_name=Lower('name'))
+                rooms = rooms.annotate(lower_name=Lower('name'))
 
             if 'direction' in request.GET:		
                 direction = request.GET['direction']		
@@ -73,34 +73,38 @@ def room_detail(request, room_id):
    # Below is experiment code to function the Datepicker(s) 
 
 
-def checkin_date(request, item_id):
-    # Add booking check in date
+def add_date(request, item_id):
+    """ Add a booking """
 
     room = get_object_or_404(Room, pk=item_id)
-    # quantity needs to be number of guests and have the option to increment additional cost by £10 for dual occupancy
     quantity = int(request.POST.get('quantity'))
-    checkin_date = request.POST.get('checkin_date')
-    print(checkin_date)
+    add_date = request.POST.get('add_date')
+    print(add_date)
     redirect_url = request.POST.get('redirect_url')
 
-    if 'available' in request.POST:
-        room_availale = request.POST['number_available']
-    datepicker_checkin = request.session.get('room_datepicker_checkin', {})
-    if room_available:
-        if item_id in list(datepicker_checkin.keys()):
-            if room_available in datepicker_checkin[item_id]['items_by_free'].keys():
-                datepicker_checkin[item_id]['items_are_available'][room_availale] += quantity
+    if 'number_available' in request.POST:
+        free = request.POST['number_available']
+    datepicker = request.session.get('room_datepicker', {})
+    if free:
+        if item_id in list(datepicker.keys()):
+            if free in datepicker[item_id]['items_by_free'].keys():
+                datepicker[item_id]['items_by_free'][free] += quantity
+                messages.success(request, f'Updated free {free.upper()} {room.name} quantity to {datepicker[item_id]["items_by_free"][free]}')
             else:
-                datepicker_checkin[item_id]['items_are_available'][room_available] = quantity
+                datepicker[item_id]['items_by_free'][free] = quantity
+                messages.success(request, f'Added free {free.upper()} {room.name} to datepicker')
         else:
-            datepicker_checkin[item_id] = {'items_are_available': {room_availale: quantity}}
+            datepicker[item_id] = {'items_by_free': {free: quantity}}
+            messages.success(request, f'Added free {free.upper()} {room.name} to book')
     else:
-        if item_id in list(datepicker_checkin.keys()):
-            datepicker_checkin[item_id] += quantity
-            (request, f'Updated {room.name} quantity to {datepicker_checkin[item_id]}')
+        if item_id in list(datepicker.keys()):
+            datepicker[item_id] += quantity
+            messages.success
+            (request, f'Updated {room.name} quantity to {datepicker[item_id]}')
         else:
             book[item_id] = quantity
+            messages.success(request, f'Added {room.name} to datepicker')
 
-    request.session['datepicker_checkin'] = datepicker_checkin
+    request.session['datepicker'] = datepicker
     return redirect(redirect_url)
 

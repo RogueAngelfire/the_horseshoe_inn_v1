@@ -102,7 +102,7 @@
                                         </span>
                                         <span class="text-uppercase">Back</span>
                                     </a>
-                                    <a href="" class="btn btn-black rounded-0 btn-lg">
+                                    <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
                                         <span class="text-uppercase">Secure Checkout</span>
                                         <span class="icon">
                                             <i class="fas fa-lock"></i>
@@ -137,6 +137,22 @@
         var form = $(this).prev('.update-form');
         form.submit();
     })
+
+    // Change date format to be readable
+    function formatDate(date) {
+        var d = new Date(date),
+            month = '' + (d.getMonth() + 1),
+            day = '' + d.getDate(),
+            year = d.getFullYear();
+
+        if (month.length < 2) 
+            month = '0' + month;
+        if (day.length < 2) 
+            day = '0' + day;
+
+        return [year, month, day].join('-');  
+
+    }
 
     // Remove item and reload on click
     $('.remove-item').click(function(e) {

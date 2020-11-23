@@ -49,8 +49,11 @@
                         </div>
                         <div class="col-7">
                             <p class="my-0"><strong>{{ item.room.name }}</strong></p>
-                            <p class="my-0 small">Size: {% if item.room.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
                             <p class="my-0 small text-muted">Guests: {{ item.quantity }}</p>
+                            <p class="my-0 small">Date of Arrival: {{ add_date }}</p>
+                            <p class="my-0 small text-muted">Number of Nights: {{ item.quantity }}</p>
+                            <p class="my-0 small">Size: {% if item.room.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
+                            
                         </div>
                         <div class="col-3 text-right">
                             <p class="my-0 small text-muted">£{{ item.room.price | calc_subtotal:item.quantity }}</p>
@@ -124,7 +127,7 @@
 							<span class="icon">
 								<i class="fas fa-exclamation-circle"></i>
 							</span>
-							<span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
+							<span>Your card will be charged <strong>£{{ grand_total|floatformat:2 }}</strong></span>
 						</p>
 					</div>
                 </form>
