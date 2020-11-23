@@ -64,7 +64,7 @@ body {
 
 
 .text-black {
-    color: #b2b2ab !important;
+    color: #948b7b !important;
 }
 
 .border-black {
@@ -86,14 +86,14 @@ body {
 }
 
 #page_title {
-    color:#b2b2ab !important;
+    color: #948b7b !important;
 }
 
 /* -------------------------------- product badges */
 
 a.category-badge > span.badge:hover {
     background: #b6d7a8 !important;
-    color: #b2b2ab !important;
+    color: #948b7b !important;
 }
 
 .btt-button {
@@ -240,13 +240,14 @@ a.category-badge > span.badge:hover {
 /* -------------------------------- Ratings */
 
 small.text-muted {
-    color: gold !important;
+    color: #948b7b !important;
 }
 
 /* -------------------------------- Product Details */
 
 .product-details-container {
-    background: #2d541c;
+    background: #fff;
+    color: #948b7b;
     padding: 4px;
 }
 
@@ -254,7 +255,7 @@ small.text-muted {
 
  #canvas {
     background: #fff;
-    color: #6c757d;
+    color: #948b7b;
     padding: 4px;
 }
 
@@ -271,11 +272,11 @@ small.text-muted {
 /* -------------------------------- Date Pickers */
 
 input.datepicker {
-    color: #6c757d;
+    color: #948b7b;
 }
 
 input.datepicker-checkout {
-    color: #6c757d;
+    color: #948b7b;
 }
 
 /* -------------------------------- Booking Button */

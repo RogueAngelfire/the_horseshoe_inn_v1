@@ -30,10 +30,11 @@ def add_to_book(request, item_id):
             if date in book[item_id] ['items_by_date'].keys():
                 book[item_id]['items_by_date'][date]['number_guests'] += quantity
                 book[item_id]['items_by_date'][date]['number_of_nights'] += add_to_book
+                messages.success(request, f'booking for arrival on {date.upper()} in {room.name} has been amended')
             else:
                 book[item_id]['items_by_date'][date] = {}
                 book[item_id]['items_by_date'][date]['number_guests'] = quantity
-                book[item_id]['item_by_date'][date]['number_nights'] = number_of_nights
+                book[item_id]['item_by_date'][date]['number_of_nights'] = number_of_nights
                 messages.success(request, f'Date added for {date.upper()} {room.name} to your booking')
         else:
             book[item_id] = {'items_by_date': {date: {'number_guests': quantity, 'number_of_nights': number_of_nights}}}

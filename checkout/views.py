@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
+from .models import Room
 
 from .forms import OrderForm
 

@@ -25,7 +25,9 @@
                         <div class="col-9">
                             <p class="my-0"><strong>{{ item.room.name }}</strong></p>
                             <p class="my-0 small">Size: {% if item.room.room_size %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
-                            <p class="my-0 small text-muted">Guests: {{ item.quantity }}</p>
+                            <p class="my-0 small text-muted">Number of Guests: {{ item.quantity }}</p>
+                            <p class="my-0 small text-muted">Date of Arrival: {{ add_date }} {{ item.date }}</p>
+                            <p class="my-0 small text-muted">Number of Nights: {{ item.quantity }}</p>
                         </div>
                     </div>
                 {% endfor %}
@@ -36,7 +38,7 @@
                         Total: 
                         <span class="float-right">£{{ total|floatformat:2 }}</span>
                     </p></strong>
-                    <a href="{% url 'view_book' %}" class="btn btn-black btn-block rounded-0">
+                    <a href="{% url 'checkout' %}" class="btn btn-black btn-block rounded-0">
                         <span class="text-uppercase">Go To Secure Checkout</span>
                         <span class="icon">
                             <i class="fas fa-lock"></i>
