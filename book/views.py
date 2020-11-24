@@ -17,7 +17,7 @@ def add_to_book(request, item_id):
 
     room = get_object_or_404(Room, pk=item_id)
     quantity = int(request.POST.get('quantity'))
-    date = request.POST.get('date')
+    date = request.POST.get('add_date')
     number_of_nights = int(request.POST.get('number_of_nights'))
     redirect_url = request.POST.get('redirect_url')
     size = None
@@ -25,26 +25,28 @@ def add_to_book(request, item_id):
         size = request.POST['room_size']
     book = request.session.get('book', {})
 
-    if date:
-        if item_id in list(book.keys()):
-            if date in book[item_id] ['items_by_date'].keys():
-                book[item_id]['items_by_date'][date]['number_guests'] += quantity
-                book[item_id]['items_by_date'][date]['number_of_nights'] += add_to_book
-                messages.success(request, f'booking for arrival on {date.upper()} in {room.name} has been amended')
-            else:
-                book[item_id]['items_by_date'][date] = {}
-                book[item_id]['items_by_date'][date]['number_guests'] = quantity
-                book[item_id]['item_by_date'][date]['number_of_nights'] = number_of_nights
-                messages.success(request, f'Date added for {date.upper()} {room.name} to your booking')
-        else:
-            book[item_id] = {'items_by_date': {date: {'number_guests': quantity, 'number_of_nights': number_of_nights}}}
-            messages.success(request, f'Added a date {date.upper()} {room.name} to your booking')
-
+    # if date:
+    #     print("date")
     if item_id in list(book.keys()):
-        book[item_id] += quantity
+        if date in book[item_id]['items_by_date'].keys():
+            book[item_id]['items_by_date'][date]['number_guests'] += quantity
+            book[item_id]['items_by_date'][date]['number_of_nights'] += number_of_nights
+            messages.success(request, f'booking for arrival on {date.upper()} in {room.name} has been amended')
+        else:
+            book[item_id]['items_by_date'][date] = {}
+            book[item_id]['items_by_date'][date]['number_guests'] = quantity
+            book[item_id]['item_by_date'][date]['number_of_nights'] = number_of_nights
+            messages.success(request, f'Date added for {date.upper()} {room.name} to your booking')
     else:
-        book[item_id] = quantity
-        messages.success(request, f'Added {room.name} to your booking')
+        book[item_id] = {'items_by_date': {date: {'number_guests': quantity, 'number_of_nights': number_of_nights}}}
+        messages.success(request, f'Added a date {date.upper()} {room.name} to your booking')
+        print(book)
+
+    # if item_id in list(book.keys()):
+    #     book[item_id] += quantity
+    # else:
+    #     book[item_id] = quantity
+    #     messages.success(request, f'Added {room.name} to your booking')
 
     request.session['book'] = book
     return redirect(redirect_url)
