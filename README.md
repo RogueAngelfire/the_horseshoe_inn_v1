@@ -230,6 +230,13 @@ Prior to all these the Website meeting we had went really well but they decided 
 for the website. I had already decided that the green colour already being used wouldnt work for smaller devices
 and will therefore see where I can improve this but first I need to fix the functionality of the website first.
 
+25/11/20
+The shear size of this project has blown me away a little as my head decided it had forgooten how to do certain tasks
+after a day trying to get my datepicker to function. I decided I best commit my work as my eyes really were starting
+to hurt even with blue light filters. However, these commits failed due to a large microsoft file glitch was causing
+this fail. Apparently it is known of but I thought it would be a good idea to mention as once my project was commited
+it went from my initial 118 commits to 225.
+
 # Data store integration
 
 # Deployment implementation
