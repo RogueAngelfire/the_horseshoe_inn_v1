@@ -61,7 +61,7 @@
                                                         </button>
                                                     </div>
                                                     <input class="form-control form-control-sm qty_input" type="number"
-                                                        name="quantity" value="{{ item.quantity }}" min="1" max="99"
+                                                        name="number_of_guests" value="{{ item.number_of_guests }}" min="1" max="99"
                                                         data-item_id="{{ item.item_id }}"
                                                         id="id_qty_{{ item.item_id }}">
                                                     <div class="input-group-append">
@@ -79,7 +79,7 @@
                                         <a class="remove-item text-danger float-right" id="remove{{ item.item_id }}" data-room_size="{{ item.size }}"><small>Remove</small></a>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">{{ item.room.price | calc_subtotal:item.quantity }}</p>
+                                        <p class="my-0">{{ item.room.price | calc_subtotal:item.number_of_guests }}</p>
                                     </td>
                                 </tr>
                             {% endfor %}
@@ -128,10 +128,10 @@
 
 {% block postloadjs %}
 {{ block.super }}
-{% include 'rooms/includes/quantity_input_script.html' %}
+{% include 'rooms/includes/number_of_guests_input_script.html' %}
 
 <script type="text/javascript">
-    // Update quantity on click
+    // Update number_of_guests on click
     $('.update-link').click(function(e) {
         var form = $(this).prev('.update-form');
         form.submit();
