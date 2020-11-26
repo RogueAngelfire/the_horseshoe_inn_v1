@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
-from django.contrib import messages	
-from django.db.models import Q	
+from django.contrib import messages
+from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Room, Category
 
@@ -17,17 +17,17 @@ def rooms(request):
     direction = None
 
     if request.GET:
-        if 'sort' in request.GET:		
-            sortkey = request.GET['sort']		
-            sort = sortkey		
-            if sortkey == 'name':		
-                sortkey = 'lower_name'		
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
                 rooms = rooms.annotate(lower_name=Lower('name'))
 
-            if 'direction' in request.GET:		
-                direction = request.GET['direction']		
-                if direction == 'desc':		
-                    sortkey = f'-{sortkey}'		
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
             rooms = rooms.order_by(sortkey)
 
     if 'category' in request.GET:
@@ -36,15 +36,15 @@ def rooms(request):
             rooms = rooms.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
-    """ Search bar remove if you decide not to use one CURRENTLY INACTIVE client may change mind"""
+    """ Search bar remove if you decide not to use one CURRENTLY INACTIVE client may change mind """
 
-    if 'q' in request.GET:		
-        query = request.GET['q']		
-        if not query:		
-            messages.error(request, "You didn't enter any search criteria!")		
+    if 'q' in request.GET:
+        query = request.GET['q']
+        if not query:
+            messages.error(request, "You didn't enter any search criteria!")
             return redirect(reverse('rooms'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)		
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -70,7 +70,7 @@ def room_detail(request, room_id):
 
     return render(request, 'rooms/room_detail.html', context)
 
-   # Below is experiment code to function the Datepicker(s) 
+   # Below is experiment code to function the Datepicker(s)
 
 
 def add_date(request, item_id):

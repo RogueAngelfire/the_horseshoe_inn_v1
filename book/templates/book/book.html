@@ -128,10 +128,10 @@
 
 {% block postloadjs %}
 {{ block.super }}
-{% include 'rooms/includes/number_of_guests_input_script.html' %}
+{% include 'rooms/includes/quantity_input_script.html' %}
 
 <script type="text/javascript">
-    // Update number_of_guests on click
+    // Update quantity on click
     $('.update-link').click(function(e) {
         var form = $(this).prev('.update-form');
         form.submit();
