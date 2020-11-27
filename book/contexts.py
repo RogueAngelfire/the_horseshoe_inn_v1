@@ -7,8 +7,9 @@ from rooms.models import Room
 def book_contents(request):
 
     book_items = []
+    number_guests = 0
+    number_of_nights = 0
     total_room_price = 0
-    room_count = 0
     book = request.session.get('book', {})
     print(f"book is {book}")
     print(f"BOOK ITEMS: {book.items()}")
@@ -26,7 +27,7 @@ def book_contents(request):
             'number_guests': number_guests,
         })
 
-    grand_total = total
+    grand_total = total_room_price * number_of_nights
 
     context = {
         'book_items': book_items,

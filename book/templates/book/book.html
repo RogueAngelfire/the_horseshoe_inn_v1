@@ -61,7 +61,7 @@
                                                         </button>
                                                     </div>
                                                     <input class="form-control form-control-sm qty_input" type="number"
-                                                        name="number_of_guests" value="{{ item.number_of_guests }}" min="1" max="99"
+                                                        name="number_guests" value="{{ item.number_guests }}" min="1" max="99"
                                                         data-item_id="{{ item.item_id }}"
                                                         id="id_qty_{{ item.item_id }}">
                                                     <div class="input-group-append">
@@ -79,7 +79,7 @@
                                         <a class="remove-item text-danger float-right" id="remove{{ item.item_id }}" data-room_size="{{ item.size }}"><small>Remove</small></a>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">{{ item.room.price | calc_subtotal:item.number_of_guests }}</p>
+                                        <p class="my-0">{{ item.room.price | calc_subtotal:item.number_guests }}</p>
                                     </td>
                                 </tr>
                             {% endfor %}
