@@ -26,28 +26,22 @@ def add_to_book(request, item_id):
         size = request.POST['room_size']
     book = request.session.get('book', {})
 
-    # if date:
-    #     print("date")
-
-    # for now, let's not check if something is in the book yet...
-    # so let's comment out from the next line until where we set booking_details (line 45 is the first line we need)
-    # if item_id in list(book.keys()):
-    #    if date in book[item_id]['items_by_date'].keys():
-    #        book[item_id]['items_by_date'][date]['number_guests'] += quantity
-    #        book[item_id]['items_by_date'][date]['number_of_nights'] += number_of_nights
-    #        messages.success(request, f'booking for arrival on {date.upper()} in {room.name} has been amended')
-    #    else:
-    #        book[item_id]['items_by_date'][date] = {}
-    #        book[item_id]['items_by_date'][date]['number_guests'] = quantity
-    #        book[item_id]['item_by_date'][date]['number_of_nights'] = number_of_nights
-    #        messages.success(request, f'Date added for {date.upper()} {room.name} to your booking')
-    # else:
-    # need to change the indentation temporarily here move the next three lines to the left one step
-    booking_details = {'items_by_date': date, 'number_guests': quantity, 'number_of_nights': number_of_nights}
-    book[item_id] = booking_details
-    messages.success(request, f'Added a date {date.upper()} {room.name} to your booking')
-    # it needs to be booking_details here in the print, as we called it like that above
-    print(booking_details)
+    if date:
+        if item_id in list(book.keys()):
+            if date in book[item_id]['items_by_date'].keys():
+                book[item_id]['items_by_date'][date]['number_guests'] += quantity
+                book[item_id]['items_by_date'][date]['number_of_nights'] += number_of_nights
+                messages.success(request, f'booking for arrival on {date.upper()} in {room.name} has been amended')
+            else:
+                book[item_id]['items_by_date'][date] = {}
+                book[item_id]['items_by_date'][date]['number_guests'] = quantity
+                book[item_id]['item_by_date'][date]['number_of_nights'] = number_of_nights
+                messages.success(request, f'Date added for {date.upper()} {room.name} to your booking')
+        else:
+            booking_details = {'items_by_date': date, 'number_guests': quantity, 'number_of_nights': number_of_nights}
+            book[item_id] = booking_details
+            messages.success(request, f'Added a date {date.upper()} {room.name} to your booking')
+            print(booking_details)
 
     # if item_id in list(book.keys()):
     #     book[item_id] += quantity

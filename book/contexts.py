@@ -21,6 +21,7 @@ def book_contents(request):
         number_guests = booking_detail['number_guests']
         total_room_price += number_of_nights * room.price
         book_items.append({
+            'room': room,
             'item_id': item_id,
             'items_by_date': items_by_date,
             'number_of_nights': number_of_nights,

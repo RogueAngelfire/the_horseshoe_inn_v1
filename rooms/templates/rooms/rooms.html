@@ -61,7 +61,7 @@
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
                                 {% if room.image %}
-                                <a href="{% url 'room_detail' room.id %}"> <!-- possible these need changing to room_detail -->
+                                <a href="{% url 'room_detail' room.id %}">
                                     <img class="card-img-top img-fluid" src="{{ room.image.url }}" alt="{{ room.name }}">
                                 </a>
                                 {% else %}

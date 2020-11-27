@@ -24,10 +24,10 @@
                         </div>
                         <div class="col-9">
                             <p class="my-0"><strong>{{ item.room.name }}</strong></p>
-                            <!-- <p class="my-0 small">Size: {% if item.room.room_size %}{{ item.size|upper }}{% else %}N/A{% endif %}</p> -->
-                            <!-- <p class="my-0 small text-muted">Number of Guests: {{ item.quantity }}</p> -->
+                            <p class="my-0 small text-muted">Number of Guests: {{ item.quantity }}</p>
                             <p class="my-0 small text-muted">Date of Arrival: {{ add_date }}</p>
                             <p class="my-0 small text-muted">Number of Nights: {{ item.quantity }}</p>
+                            <!--<p class="my-0 small">Size: {% if item.room.room_size %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>-->
                         </div>
                     </div>
                 {% endfor %}
