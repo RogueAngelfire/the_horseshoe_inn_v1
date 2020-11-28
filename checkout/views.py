@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
 from django.conf import settings
-from .models import Room
 
 from .forms import OrderForm
 from book.contexts import book_contents
@@ -33,7 +32,6 @@ def checkout(request):
         message.warning(request, 'Stripe public key is missing. \
             Did you forget to set it in your environment?')
 
-    order_form = OrderForm()
     template = 'checkout/checkout.html'
     context = {
         'order_form': order_form,
