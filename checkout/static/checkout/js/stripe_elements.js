@@ -21,7 +21,7 @@ var style = {
         }
     },
     invalid: {
-        color: '#fff',
+        color: '#dc3545',
         iconColor: '#dc3545'
     }
 };
