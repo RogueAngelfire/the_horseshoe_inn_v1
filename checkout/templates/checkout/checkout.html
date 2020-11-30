@@ -118,7 +118,7 @@
 							<span class="font-weight-bold">Add to Booking</span>
 						</a>
 						<button id="submit-button" class="btn btn-black rounded-0">
-							<span class="font-weight-bold">Complete Order</span>
+							<span class="font-weight-bold">Complete Booking</span>
 							<span class="icon">
 								<i class="fas fa-lock"></i>
 							</span>
@@ -140,6 +140,6 @@
 {% block postloadjs %}
     {{ block.super }}
     {{ stripe_public_key|json_script:"id_stripe_public_key" }}
-    {{ stripe_public_key|json_script:"id_client_secret" }}
+    {{ stripe_secret|json_script:"id_client_secret" }}
     <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}
