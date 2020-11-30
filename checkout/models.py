@@ -31,16 +31,16 @@ class Order(models.Model):
 
     def update_total(self):
         """
-        Update grand total each time a line item is added.
+        Update grand total each time a line item is added note changed + to = 301120.
         """
-        self.order_total + self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum']
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
 
         self.grand_total = self.order_total
         self.save()
 
     def save(self, *args, **kwargs):
         """
-        Overide the original save method to set the order number
+        Override the original save method to set the order number
         if it hasn't been set already.
         """
         if not self.order_number:
