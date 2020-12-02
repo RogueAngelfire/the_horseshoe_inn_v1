@@ -17,6 +17,7 @@ def book_contents(request):
     for item_id, booking_detail in book.items():
         room = get_object_or_404(Room, pk=item_id)
         items_by_date = booking_detail['items_by_date']
+        print('items_by_date:', items_by_date)
         number_of_nights = booking_detail['number_of_nights']
         number_guests = booking_detail['number_guests']
         total_room_price += number_of_nights * room.price
@@ -24,6 +25,7 @@ def book_contents(request):
             'room': room,
             'item_id': item_id,
             'items_by_date': items_by_date,
+            'date': items_by_date,
             'number_of_nights': number_of_nights,
             'number_guests': number_guests,
         })

@@ -43,12 +43,6 @@ def add_to_book(request, item_id):
             messages.success(request, f'Added a date {date.upper()} {room.name} to your booking')
             print(booking_details)
 
-    # if item_id in list(book.keys()):
-    #     book[item_id] += quantity
-    # else:
-    #     book[item_id] = quantity
-    #     messages.success(request, f'Added {room.name} to your booking')
-
     request.session['book'] = book
     return redirect(redirect_url)
 
@@ -85,7 +79,7 @@ def adjust_booking(request, item_id):
     """ Adjust the booking by adding and subtacting guests quantity """
 
     room = get_object_or_404(Room, pk=item_id)
-    quantity = int(request.POST.get('quantity'))
+    quantity = int(request.POST.get('number_guests'))
     size = None
     if 'room_size' in request.POST:
         size = request.POST['room_size']

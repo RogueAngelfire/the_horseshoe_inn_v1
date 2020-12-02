@@ -45,12 +45,12 @@ p.my-0.small {
 
 select,
 select option {
-    color: e6ebf1;
+    color: #000;
 }
 
 select:invalid,
 select option[value=""] {
-    color: #000 !important;
+    color: #aab7c4 !important;
 }
 
 #loading-overlay {
