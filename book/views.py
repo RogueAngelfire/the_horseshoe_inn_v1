@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect, reverse, HttpResponse, get_object_or_404
-from django.shortcuts import get_object_or_404
 from django.contrib import messages
 
 from rooms.models import Room
