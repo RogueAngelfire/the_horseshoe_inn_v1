@@ -25,7 +25,6 @@ def book_contents(request):
             'room': room,
             'item_id': item_id,
             'items_by_date': items_by_date,
-            'date': items_by_date,
             'number_of_nights': number_of_nights,
             'number_guests': number_guests,
         })

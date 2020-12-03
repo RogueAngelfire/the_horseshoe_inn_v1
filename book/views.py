@@ -86,8 +86,8 @@ def adjust_booking(request, item_id):
 
     if size:
         if quantity > 0:
-            book[item_id]['items_by_size'][size] = quantity
-            messages.success(request, f'Updated {size.upper()} {room.name} quantity to {book[item_id]["items_by_size"][size]}')
+            book[number_guests]['items_by_size'][size] = quantity
+            messages.success(request, f'Updated {size.upper()} {room.name} quantity to {book[number_guests]["items_by_size"][size]}')
         else:
             del book[item_id]['items_by_size'][size]
             if not book[item_id]['items_by_size']:
