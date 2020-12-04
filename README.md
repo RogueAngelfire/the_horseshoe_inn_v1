@@ -237,6 +237,14 @@ to hurt even with blue light filters. However, these commits failed due to a lar
 this fail. Apparently it is known of but I thought it would be a good idea to mention as once my project was commited
 it went from my initial 118 commits to 225.
 
+04/12/20
+I had more issues with my repository I'm not sure if it was due to a cache issue when I had to keep clearing it when
+my site kept flagging errors and clearing the cache got it functioning again. This required me to log back into all
+my sites. Commit were made but today despite a branched project dispaying all the correct information my original master
+did not and implied I hadn't commited for 3 days which clearly wasnt the case. However, the only thing I could do was
+in the terminal type: $ git checkout  then $ git pull
+I made a quick adjustment to bag html and made the commit noting this issue at the same time and evething was successful.
+
 # Data store integration
 
 # Deployment implementation
