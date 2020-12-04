@@ -52,8 +52,6 @@
                             <p class="my-0 small text-muted">Guests: {{ item.number_guests }}</p>
                             <p class="my-0 small">Date of Arrival: {{ item.items_by_date }}</p>
                             <p class="my-0 small text-muted">Number of Nights: {{ item.number_of_nights }}</p>
-                            <!--<p class="my-0 small">Size: {% if item.room.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>-->
-                            
                         </div>
                         <div class="col-3 text-right">
                             <p class="my-0 small text-muted">£{{ item.room.price | calc_subtotal:item.number_guests }}</p>
