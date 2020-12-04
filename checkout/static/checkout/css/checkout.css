@@ -43,6 +43,16 @@ p.my-0.small {
     color:#000;
 }
 
+select,
+select option {
+    color: #000;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #aab7c4 !important;
+}
+
 #loading-overlay {
 	display: none;
 	position: fixed;

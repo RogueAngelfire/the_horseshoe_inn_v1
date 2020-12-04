@@ -54,7 +54,19 @@
 
                     <div class="row">
                         <div class="col">
-                            <small class="text-muted">Booking Details:</small>
+                            <small class="text-muted">Booking Details: {{ item.items_by_date }}{{ item.number_guests }}</small>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <small class="text-muted">Number of Guest: {{ item.number_guests }}</small>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <small class="text-muted">Number of Nights: {{ item.number_of_nights }}</small>
                         </div>
                     </div>
 
