@@ -2,6 +2,7 @@ from django.http import HttpResponse
 
 from .models import Order, OrderLineItem
 from rooms.models import Room
+from profiles.models import UserProfile
 
 import json
 import time
@@ -31,28 +32,43 @@ class StripeWH_Handler:
         save_info = intent.metadata.save_info
 
         billing_details = intent.charges.data[0].billing_details
-        shipping_details = intent.shipping
+        booking_details = intent.shipping
         grand_total = round(intent.charges.data[0].amount / 100, 2)
 
         # Clean data in the shipping details
-        for field, value in shipping_details.address.items():
+        for field, value in booking_details.address.items():
             if value == "":
-                shipping_details.address[field] = None
+                booking_details.address[field] = None
+
+        # Update profile information if save_info was checked
+        profile = None
+        username = intent.metadat.username
+        if username != 'AnonymousUser':
+            profile = UserProfile.objects.get(user__username=username)
+            if save_info:
+                profile.default_phone_number = booking_details.phone
+                profile.default_street_address1 = booking_details.address.line1
+                profile.default_street_address2 = booking_details.address.line2
+                profile.default_town_or_city = booking_details.address.city
+                profile.default_county = booking_details.address.state
+                profile.default_postcode = booking_details.address.postal_code
+                profile.default_country = booking_details.address.country
+                profile.save()
 
         order_exists = False
         attempt = 1
         while attempt <= 5:
             try:
                 order = Order.objects.get(
-                    full_name__iexact=shipping_details.name,
+                    full_name__iexact=booking_details.name,
                     email__iexact=billing_details.email,
-                    phone_number__iexact=shipping_details.phone,
-                    Street_address1__iexact=shipping_details.address.line1,
-                    Street_address2__iexact=shipping_details.address.line2,
-                    town_or_city__iexact=shipping_details.address.city,
-                    county__iexact=shipping_details.address.state,
-                    postcode__iexact=shipping_details.address.postal_code,
-                    country__iexact=shipping_details.address.country,
+                    phone_number__iexact=booking_details.phone,
+                    Street_address1__iexact=booking_details.address.line1,
+                    Street_address2__iexact=booking_details.address.line2,
+                    town_or_city__iexact=booking_details.address.city,
+                    county__iexact=booking_details.address.state,
+                    postcode__iexact=booking_details.address.postal_code,
+                    country__iexact=booking_details.address.country,
                     grand_total=grand_total,
                     original_book=book,
                     stripe_pid=pid,
@@ -70,15 +86,16 @@ class StripeWH_Handler:
             order = None
             try:
                 order = Order.objects.create(
-                    full_name=shipping_details.name,
+                    full_name=booking_details.name,
+                    user_profile=profile,
                     email=billing_details.email,
-                    phone_number=shipping_details.phone,
-                    Street_address1=shipping_details.address.line1,
-                    Street_address2=shipping_details.address.line2,
-                    town_or_city=shipping_details.address.city,
-                    county=shipping_details.address.state,
-                    postcode=shipping_details.address.postal_code,
-                    country=shipping_details.address.country,
+                    phone_number=booking_details.phone,
+                    Street_address1=booking_details.address.line1,
+                    Street_address2=booking_details.address.line2,
+                    town_or_city=booking_details.address.city,
+                    county=booking_details.address.state,
+                    postcode=booking_details.address.postal_code,
+                    country=booking_details.address.country,
                     original_book=book,
                     stripe_pid=pid,
                 )
