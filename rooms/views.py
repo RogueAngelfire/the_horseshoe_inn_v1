@@ -130,3 +130,27 @@ def add_room(request):
     }
 
     return render(request, template, context)
+
+
+def edit_room(request, room_id):
+    """ Edit a room for the pub """
+    room = get_object_or_404(Room, pk=room_id)
+    if request.method == 'POST':
+        form = RoomForm(request.POST, request.FILES, instance=room)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated Room!')
+            return redirect(reverse('room_detail', args=[room.id]))
+        else:
+            messages.error(request, 'Failed to update the Room. Please ensure the form is valid.')
+    else:
+        form = RoomForm(instance=room)
+        messages.info(request, f'You are editing {room.name}')
+
+    template = 'rooms/edit_room.html'
+    context = {
+        'form': form,
+        'room': room,
+    }
+
+    return render(request, template, context)
