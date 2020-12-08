@@ -29,16 +29,16 @@ def add_to_book(request, item_id):
     if date:
         if item_id in list(book.keys()):
             if date in book[item_id]['items_by_date'].keys():
-                book[item_id]['items_by_date'][date]['number_guests'] += quantity
-                book[item_id]['items_by_date'][date]['number_of_nights'] += number_of_nights
+                book[item_id]['items_by_size'][date]['number_guests'] += quantity
+                book[item_id]['items_by_size'][date]['number_of_nights'] += number_of_nights
                 messages.success(request, f'booking for arrival on {date.upper()} in {room.name} has been amended')
             else:
-                book[item_id]['items_by_date'][date] = {}
-                book[item_id]['items_by_date'][date]['number_guests'] = quantity
+                book[item_id]['items_by_size'][date] = {}
+                book[item_id]['items_by_size'][date]['number_guests'] = quantity
                 book[item_id]['item_by_date'][date]['number_of_nights'] = number_of_nights
                 messages.success(request, f'Date added for {date.upper()} {room.name} to your booking')
         else:
-            booking_details = {'items_by_date': date, 'number_guests': quantity, 'number_of_nights': number_of_nights}
+            booking_details = {'items_by_size': date, 'number_guests': quantity, 'number_of_nights': number_of_nights}
             book[item_id] = booking_details
             messages.success(request, f'Added a date {date.upper()} {room.name} to your booking')
             print(booking_details)
@@ -76,7 +76,7 @@ def add_to_book(request, item_id):
 
 
 def adjust_booking(request, item_id):
-    """ Adjust the booking by adding and subtacting guests quantity """
+    """ Adjust the booking by adding and subtracting guests quantity """
 
     room = get_object_or_404(Room, pk=item_id)
     quantity = int(request.POST.get('number_guests'))
@@ -87,8 +87,8 @@ def adjust_booking(request, item_id):
 
     if size:
         if quantity > 0:
-            book[number_guests]['items_by_size'][size] = quantity
-            messages.success(request, f'Updated {size.upper()} {room.name} quantity to {book[number_guests]["items_by_size"][size]}')
+            book[item_id]['items_by_size'][size] = quantity
+            messages.success(request, f'Updated {size.upper()} {room.name} quantity to {book[item_id]["items_by_size"][size]}')
         else:
             del book[item_id]['items_by_size'][size]
             if not book[item_id]['items_by_size']:

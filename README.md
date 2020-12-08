@@ -172,6 +172,8 @@ security not putting SECRET_KEYS in wrong place using config vars in Heroku
 * AWS S3 Bucket - https://aws.amazon.com/s3/ for storage of data and images in database.
 * Pillow - https://pypi.org/project/Pillow/2.2.1/ links images to the database.
 * PIP - https://pip.pypa.io/en/stable/ - Package management system.
+* Crispy Forms by Django - https://django-crispy-forms.readthedocs.io/en/latest/
+* Allauth by Djang - https://django-allauth.readthedocs.io/en/latest/
 
 
 # Comments and Diary
@@ -206,6 +208,7 @@ potentially it could go very wrong. To assist him I have plenty of ideas to supp
 and my successes.
 
 02/10/20
+
 I have found out my deadlines and after a chat with my mentor he has advised me not to take on the huge
 task of simoutaniously building 2 large websites as just one was pointed out to me by student services as
 a behemoth. I have also been in contact with Paul again at The Horseshoe Inn and he agrees that the
@@ -217,6 +220,7 @@ however, I hope to submit the assignemt around the 1st November to allow me to a
 and clients I have gathered.
 
 03/11/20
+
 With the delay in images I took a trip to Scotland to get these images while Scotlands hospitality industry
 had been closed to public houses. However there was issues with gettting these images as Paul and Toni decided
 to decorate the rooms for letting. Therefore what I went therefore I could not achieve. I wont lie I was disapointed
@@ -230,6 +234,7 @@ for the website. I had already decided that the green colour already being used 
 and will therefore see where I can improve this but first I need to fix the functionality of the website first.
 
 25/11/20
+
 The shear size of this project has blown me away a little as my head decided it had forgooten how to do certain tasks
 after a day trying to get my datepicker to function. I decided I best commit my work as my eyes really were starting
 to hurt even with blue light filters. However, these commits failed due to a large microsoft file glitch was causing
@@ -237,6 +242,7 @@ this fail. Apparently it is known of but I thought it would be a good idea to me
 it went from my initial 118 commits to 225.
 
 04/12/20
+
 I had more issues with my repository I'm not sure if it was due to a cache issue when I had to keep clearing it when
 my site kept flagging errors and clearing the cache got it functioning again. This required me to log back into all
 my sites. Commit were made but today despite a branched project dispaying all the correct information my original master
@@ -245,16 +251,28 @@ in the terminal type: $ git checkout  then $ git pull
 I made a quick adjustment to bag html and made the commit noting this issue at the same time and evething was successful.
 
 07/12/20
+
 I lost a day due to my workspace of 3 months becoming corrupted. I notified gitpod and I am still waiting for a Response
 I believe it was to commiting work after my cache being cleared in the browser and logging me out of my programs.
 I have now had to set a branch up and reinstall migrations. The only positive I have taken from this is I now know what
 to do if this happens again.
+Sadly I lost all my rooms and menu items in my database however, I have been advised only add one or two items for testing purposes
+before adding to heroku database.
 
 # Data store integration
 
 # Deployment implementation
 
 # Deployment write-up
+
+# Stetch Goals
+
+* Ideally I would like better function to the booking calendar/date picker where if it is booked already it would be highlighted
+red and show green if availble. 
+
+* Another feature that would be nice on the individual rooms have a carosel/slide show that shows different images of the rooms.
+
+
 
 # Media
 
