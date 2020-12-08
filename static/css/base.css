@@ -23,6 +23,10 @@ body {
     text-transform: uppercase;
 }
 
+#stay {
+    color: #2d541c;
+}
+
 #logo {
      width: 15%;
     padding: 4px;
@@ -327,6 +331,7 @@ small.text-muted {
 
 input.datepicker {
     color: #948b7b;
+    padding: 8px;
 }
 
 input.datepicker-checkout {

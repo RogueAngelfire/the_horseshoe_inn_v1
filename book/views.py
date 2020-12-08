@@ -5,6 +5,7 @@ from rooms.models import Room
 
 # Create your views here.
 
+
 def view_book(request):
     """ A view that renders the booking contents page """
 
@@ -17,7 +18,7 @@ def add_to_book(request, item_id):
     room = get_object_or_404(Room, pk=item_id)
     quantity = int(request.POST.get('quantity'))
     date = request.POST.get('add_date')
-    #print(date)
+    # print(date)
     number_of_nights = int(request.POST.get('number_of_nights'))
     redirect_url = request.POST.get('redirect_url')
     size = None

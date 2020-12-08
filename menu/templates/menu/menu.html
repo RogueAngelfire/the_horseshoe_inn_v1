@@ -18,16 +18,13 @@
                 <p style="color: #b2b2ab;"> Here is our current selection of food. All ordering made in house of via telephone for take away service
                 . Don't forget to check out the specials boards when visiting. </p>
                 {% for c in current_categories %}
-                <!--Added-->    <a class="category-badge text-decoration-none" href="{% url 'menu' %}?category={{ c.name }}">
+                   <a class="category-badge text-decoration-none" href="{% url 'menu' %}?category={{ c.name }}">
                         <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
                     </a>
-                {% endfor %} <!--end-->
+                {% endfor %}
                 <hr class="w-50 mb-1">
             </div>
         </div>
-        <!-- Resume -->
-                            
-    
         <div class="row">
             <div class="product-container col-10 offset-1">
                 <div class="row mt-1 mb-2">
@@ -55,8 +52,6 @@
                         </p>
                     </div>
             </div>
-        
-        <!-- stop -->
         <div class="row">
             <div class="product-container col-10 offset-1">
                 <div class="row mt-1 mb-2"></div>
@@ -74,14 +69,12 @@
                                 </a>
                                 {% endif %}
                                 <div class="card-body pb-0">
-                                   <!-- <p class="mb-0">{{ menu_category_item.name }}</p> I want this to link product name-->
                                     <p class="mb-0">{{ menu_item.name }}</p>
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
                                             <p class="lead mb-0 text-left font-weight-bold">£{{ menu_item.price }}</p>
-                                            <!-- Here -->
                                             {% if menu_item.category %}
                                             <p class="small mt-1 mb-0">
                                                 <a class="text-muted" href="{% url 'menu' %}?category={{ menu_item.category.name }}">
@@ -89,7 +82,6 @@
                                                 </a>
                                             </p>
                                             {% endif %}
-                                            <!-- stop -->
                                             {% if menu_item.rating %}
                                                 <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ menu_item.rating }} / 5</small>
                                             {% else %}

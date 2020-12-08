@@ -100,7 +100,6 @@ I have relied on the bootstrap technologies to achieve this.
 
 Using google fonts and my fonts dot com. I used a picture of the front of the inn to identify
 what their pub font is and the closest match that was free was Libre Baskerville.
-<!-- Don't forget to add visual colour images here and remove this comment when completed-->
 This will keep continuity with the establishmennt and to continue with the continuity I have
 gone with their new green iterior colour scheme which is #B6D7A8 the font colour for the logo font
 is B2B2AB I picked this colour as a colour match from photoshop from the picture with the font.
@@ -244,6 +243,12 @@ my sites. Commit were made but today despite a branched project dispaying all th
 did not and implied I hadn't commited for 3 days which clearly wasnt the case. However, the only thing I could do was
 in the terminal type: $ git checkout  then $ git pull
 I made a quick adjustment to bag html and made the commit noting this issue at the same time and evething was successful.
+
+07/12/20
+I lost a day due to my workspace of 3 months becoming corrupted. I notified gitpod and I am still waiting for a Response
+I believe it was to commiting work after my cache being cleared in the browser and logging me out of my programs.
+I have now had to set a branch up and reinstall migrations. The only positive I have taken from this is I now know what
+to do if this happens again.
 
 # Data store integration
 
