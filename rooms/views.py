@@ -2,9 +2,13 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
+
+
 from .models import Room, Category
+from .forms import RoomForm
 
 # Create your views here.
+
 
 def rooms(request):
 
@@ -70,8 +74,6 @@ def room_detail(request, room_id):
 
     return render(request, 'rooms/room_detail.html', context)
 
-   # Below is experiment code to function the Datepicker(s)
-
 
 def add_date(request, item_id):
     """ Add a booking """
@@ -108,3 +110,13 @@ def add_date(request, item_id):
     request.session['datepicker'] = datepicker
     return redirect(redirect_url)
 
+
+def add_room(request):
+    """ Add a Room to the Pub """
+    form = RoomForm()
+    template = 'rooms/add_room.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
