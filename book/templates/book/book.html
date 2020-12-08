@@ -38,6 +38,11 @@
                             {% for item in book_items %}
                                 <tr>
                                     <td class="p-3 w-25">
+                                        {% if item.room.image %}
+                                        <img class="img-fluid rounded" src="{{ item.room.image.url }}" alt="{{ item.room.name }}">
+                                        {% else %}
+                                        <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.room.name }}">
+                                        {% endif %}
                                         <img class="img-fluid rounded" src="{{ item.room.image.url }}">
                                     </td>
                                     <td class="py-3">

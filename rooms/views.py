@@ -113,7 +113,17 @@ def add_date(request, item_id):
 
 def add_room(request):
     """ Add a Room to the Pub """
-    form = RoomForm()
+    if request.method == 'POST':
+        form = RoomForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Room Successfully Added!')
+            return redirect(reverse('add_room'))
+        else:
+            messages.error(request, 'Failed to Add Room. Please ensure the form is valid.')
+    else:
+        form = RoomForm()
+
     template = 'rooms/add_room.html'
     context = {
         'form': form,
