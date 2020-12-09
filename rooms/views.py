@@ -116,9 +116,9 @@ def add_room(request):
     if request.method == 'POST':
         form = RoomForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            room = form.save()
             messages.success(request, 'Room Successfully Added!')
-            return redirect(reverse('add_room'))
+            return redirect(reverse('room_detail', args=[room.id]))
         else:
             messages.error(request, 'Failed to Add Room. Please ensure the form is valid.')
     else:
@@ -154,3 +154,11 @@ def edit_room(request, room_id):
     }
 
     return render(request, template, context)
+
+
+def delete_room(request, room_id):
+    """ Delete a room from the pub """
+    room = get_object_or_404(Room, pk=room_id)
+    room.delete()
+    messages.success(request, 'Room deleted!')
+    return redirect(reverse('rooms'))

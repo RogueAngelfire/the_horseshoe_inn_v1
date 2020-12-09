@@ -75,20 +75,24 @@
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold">£{{ room.price }}</p>
-                                            <!-- Here -->	
+                                            <p class="lead mb-0 text-left font-weight-bold">£{{ room.price }}</p>	
                                             {% if room.category %}	
                                             <p class="small mt-1 mb-0">	
                                                 <a class="text-muted" href="{% url 'rooms' %}?category={{ room.category.name }}">	
                                                     <i class="fas fa-tag mr-1"></i>{{ room.category.friendly_name }}	
                                                 </a>	
                                             </p>	
-                                            {% endif %}	
-                                            <!-- stop -->
+                                            {% endif %}
                                             {% if room.rating %}
                                                 <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ room.rating }} / 5</small>
                                             {% else %}
                                                 <small class="text-muted">No Rating</small>
+                                            {% endif %}
+                                            {% if request.user.is_superuser %}
+                                                <small class="ml-3">
+                                                    <a href="{% url 'edit_room' room.id %}">Edit</a>
+                                                    <a class="text-danger" href="{% url 'delete_room' room.id %}">Delete</a>
+                                                </small> 
                                             {% endif %}
                                         </div>
                                     </div>
