@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
@@ -111,8 +112,13 @@ def add_date(request, item_id):
     return redirect(redirect_url)
 
 
+@login_required
 def add_room(request):
     """ Add a Room to the Pub """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only The Horseshoe Inn admin team can do that.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = RoomForm(request.POST, request.FILES)
         if form.is_valid():
@@ -132,8 +138,13 @@ def add_room(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_room(request, room_id):
     """ Edit a room for the pub """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only The Horseshoe Inn admin team can do that.')
+        return redirect(reverse('home'))
+
     room = get_object_or_404(Room, pk=room_id)
     if request.method == 'POST':
         form = RoomForm(request.POST, request.FILES, instance=room)
@@ -156,8 +167,13 @@ def edit_room(request, room_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_room(request, room_id):
     """ Delete a room from the pub """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only The Horseshoe Inn admin team can do that.')
+        return redirect(reverse('home'))
+
     room = get_object_or_404(Room, pk=room_id)
     room.delete()
     messages.success(request, 'Room deleted!')
