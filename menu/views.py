@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
@@ -11,8 +11,7 @@ from .forms import MenuForm
 
 
 def menu(request):
-    
- """ A view to return the menu page """
+    """ A view to return the menu page """
 
     menu = Menu.objects.all()
     query = None

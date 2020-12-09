@@ -25,6 +25,11 @@
                             {% else %}
                             <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.room.name }}">
                             {% endif %}
+                            {% if item.menu.image %}
+                            <img class="w-100" src="{{ item.room.image.url }}" alt="{{ item.menu.name }}">
+                            {% else %}
+                            <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.menu.name }}">
+                            {% endif %}
                         </div>
                         <div class="col-9">
                             <p class="my-0"><strong>{{ item.room.name }}</strong></p>

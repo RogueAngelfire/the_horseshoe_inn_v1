@@ -1,15 +1,15 @@
 from django import forms
-from .widgets import CustomeClearableFileInput
+from .widgets import CustomClearableFileInput
 from .models import Menu, Category
 
 
-class RoomForm(forms.ModelForm):
+class MenuForm(forms.ModelForm):
 
     class Meta:
         model = Menu
         fields = '__all__'
 
-    image = forms.ImageField(label='image', required=False, widget=CustomeClearableFileInput)
+    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
