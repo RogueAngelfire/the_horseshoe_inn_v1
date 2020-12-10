@@ -10,6 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+import os
+import dj_database_url
+
 import os  # This was instructed to be added but did so when I ran into errors
 from pathlib import Path
 
