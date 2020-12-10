@@ -1,1 +1,1 @@
-web: gunicorn the_horseshoe_inn_v1.wsgi:application
+web: gunicorn the-horseshoe-inn-v1.wsgi:application
