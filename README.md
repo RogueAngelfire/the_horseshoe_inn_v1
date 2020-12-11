@@ -174,6 +174,14 @@ security not putting SECRET_KEYS in wrong place using config vars in Heroku
 * PIP - https://pip.pypa.io/en/stable/ - Package management system.
 * Crispy Forms by Django - https://django-crispy-forms.readthedocs.io/en/latest/
 * Allauth by Djang - https://django-allauth.readthedocs.io/en/latest/
+* S3transfer https://pypi.org/project/s3transfer
+* Gunicorn https://gunicorn.org/ allows deployment to Heroku from Django
+* Boto3 https://boto3.amazonaws.com/v1/documentation/api/latest/index.html
+* Gmail - https://mail.google.com/ popular versatile and flexible email provider
+* Psycopg2 - https://pypi.org/project/psycopg2/ A postgresSQ database for Python
+* AWS S3 Bucket - https://aws.amazon.com/s3/ Amazon file to store static file and images to a database
+* Django Storages - https://django-storages.readthedocs.io/en/latest/
+* DJ_Database -
 
 
 # Comments and Diary
@@ -263,6 +271,83 @@ before adding to heroku database.
 
 # Deployment implementation
 
+I took the following steps to deploy my website to Heroku:
+
+* Log it to Heroku and click new app.
+* Name the app in lower case letters and dashes only and select the nearest location mine being Europe.
+* If the name is available proceed.
+* Click on the resorces tab and select search and type Postgres for the Heroku Database.
+* Back in the Gitpod terminal install  dj_database_url with the pip3 install command.
+* Then do the same with psycopg2-binary.
+* Now Freeze the requirements.
+* I made sure all my requirement.txt was updated.
+* I then adjusted the setting for the Database in settings.py for testing.
+* Now Back in the termainal I typed the following python3 manage.py showmigrations
+* I then proceeded to type python3 manage.py migrate
+* I then set up myself a superuser
+* An if statement was added to the database then:
+* pip3 install gunicorn
+* Now I created a new Procfile making sure the name matched my main workspace folder name.
+* I now logged into Heroku via the terminal with the following:
+* heroku login -i 
+* followed by  the the next command:
+* heroku config:set DISABLE_COLLLECTSTATIC=1 --app (my app name here)
+* I then went to AWS and accessed the console selectin IAM as choice.
+* In AWS in the search bar I typed in S3 and clicked on S3 cloud service.
+* Then clicked creat bucket namining the same as my Heroku app.
+* I select the nearest region to me unchecking block public access and acknowledged that bucket will go public.
+* I then turned on the static website hostingon clicking on my bucket. Added index.html and error.html where prompted.
+* Clicked on the permissions tab and then pasted in code from the CORS (Cross origin Resorce Sharing).
+* Select Bucket Policy then policy generator so as to create a security policy.
+* Policy type is S3 Bucket Policy
+* Allow all policies by adding * to the box, Action is get object.
+* From the previous tab still open from when opening the policy generator.
+* Now copy the bucket ARN (Amazon Resorce Name) then paste it at the bottom of the policy generator where prompted.
+* Click add statement then generate the policy.
+* Copy the Json Code in the document and paste in bucket policy editor.
+* Before saving add a */ within the quotations after the project name.
+* Click Save
+* Now scroll down to access control list and click edit.
+* Check the list box for Everyone (Public Access) then click the box stating you understand the effects of the changes
+made on the objects and buckets.
+* Save again
+* I now click sevices link. 
+* Select set group name and add name - again I made this simple and similar to previous names
+* Now click next step twcice and create the group
+* The click  policy then policies and select the Json tab.
+* Then click import managed policy from the pre build amazon policies.
+* Use the filter search and type S3 and import the AmazonS3Fullaccess Policy.
+* Using the Bucket ARN from the previous created bucket policy page in S3.
+* Copy and paste it in the Json code on the line with resorces as follows:
+line 7, "resorces": [
+line 8, "arn:information goes here",
+line 9, "arn:information goes here/*"
+line 10, ]
+* Click review policy
+* Give it a name and a discription I added -policy after the title.
+* Click Create policy then groups select the one just made followed by permissions.
+* Then attach policy
+* search for policy just created and select it and click attach policy.
+* Now create a user to put in the group, so click users on the far left side of the pannel.
+* Then add user
+* Add username (your project name)-staticfiles-user.
+* Allow programmatic access
+* Then select next
+* Now click Appropriate policy then click the next:tag then next:review
+* Then click create user
+* Now download the  .CSV file
+* IMPORTANT to downlaod and save as cannot do this again.
+* Then close the window
+* At this stage add the AWS instructions to the settings.py page
+* After deploying to Heroku and Github with push command simutaneously.
+* Click on the bucket in S3
+* Within the object tab next to the word lits version click the refresh button and the static file will appear.
+* Add the cache control statement that can be seen in settings.py
+* Now goto S3 and on the bucket overview click create folder and call it media and click create folder.
+* Now click on that folder 
+* Inside click upload and add files.
+
+
 # Deployment write-up
 
 # Stetch Goals
@@ -283,3 +368,5 @@ my previous assignments. I hope our paths cross again it has been a true honour 
 
 Thank you to Johann Alberts and Tim Nelson at the code institute for allowing me to have a greater understanding of Models
 and Views with this milestone assignemt.
+
+Futher thank goes to ckz8780 for his amazin Django lessons with the code institute which was essential refernce material.
