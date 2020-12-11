@@ -1,0 +1,6 @@
+{% if item.room.image %}
+    <img class="img-fluid rounded" src="{{ item.room.image.url }}" alt="{{ item.room.name }}">
+{% else %}
+    <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.room.name }}">
+{% endif %}
+<img class="img-fluid rounded" src="{{ item.room.image.url }}">

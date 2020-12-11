@@ -24,7 +24,38 @@
         <div class="row">
             <div class="col"></div>
                 {% if book_items %}
-                    <div class="table-responsive rounded" style="color: #b2b2ab;">
+                    <div class="d-block d-md-none">
+                        <div class="row">
+                            <div class="col">
+                                {% include "book/book-total.html" %}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                {% include "book/checkout-buttons.html" %}
+                                <p class="text-muted mb-5" style="color: #b2b2ab;">The summary of your booking is below</p>
+                            </div>
+                        </div>
+                        {% for item in book_items %}
+                            <div class="row">
+                                <div class="col-12 col-sm-6 mb-2">
+                                    {% include "book/room-image.html" %}
+                                </div>
+                                <div class="col-12 col-sm-6 mb-2">
+                                    {% include "book/room-info.html" %}
+                                </div>
+                                <div class="col-12 col-sm-6 order-sm last">
+                                    <p class="my-0">£{{ item.room.price }}</p>
+                                    <p><strong>Total</strong>£{{ item.room.price | calc_subtotal:item.quantity }}</p>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    {% include "book/quantity-form.html" %}
+                                </div>
+                            </div>
+                            <div class="row"><div class="col"><hr></div></div>
+                        {% endfor %}
+                    </div>
+                    <div class="table-responsive rounded d-none d-md-block" style="color: #b2b2ab;">
                         <table class="table table-sm table-border1">
                             <thread class="text-black">
                                 <tr>
@@ -38,50 +69,16 @@
                             {% for item in book_items %}
                                 <tr>
                                     <td class="p-3 w-25">
-                                        {% if item.room.image %}
-                                        <img class="img-fluid rounded" src="{{ item.room.image.url }}" alt="{{ item.room.name }}">
-                                        {% else %}
-                                        <img class="img-fluid rounded" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.room.name }}">
-                                        {% endif %}
-                                        <img class="img-fluid rounded" src="{{ item.room.image.url }}">
+                                        {% include "book/room-image.html" %}
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0"><strong>{{ item.room.name }}</strong></p>
-                                        <p class="my-0 small text-muted">Category: {{ item.room.Category|upper }}</p>
+                                        {% includes "book/room-info" %}
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">£{{ item.room.price }}</p> 
                                     </td>
                                     <td class="py-3">
-                                        <form class="form update-form" method="POST" action="{% url 'adjust_booking' item.item_id %}">
-                                            {% csrf_token %}
-                                            <div class="form-group">
-                                                <div class="input-group">
-                                                    <div class="input-group-prepend">
-                                                        <button class="decrement-qty btn btn-sm btn-black rounded-0" 
-                                                            data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
-                                                            <span>
-                                                                <i class="fas fa-minus fa-sm"></i>
-                                                            </span>
-                                                        </button>
-                                                    </div>
-                                                    <input class="form-control form-control-sm qty_input" type="number"
-                                                        name="number_guests" value="{{ item.number_guests }}" min="1" max="99"
-                                                        data-item_id="{{ item.item_id }}"
-                                                        id="id_qty_{{ item.item_id }}">
-                                                    <div class="input-group-append">
-                                                        <button class="increment-qty btn btn-sm btn-black rounded-0"
-                                                            data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
-                                                            <span>
-                                                                <i class="fas fa-plus fa-sm"></i>
-                                                            </span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                        <a class="update-link text-info"><small>Update</small></a>
-                                        <a class="remove-item text-danger float-right" id="remove{{ item.item_id }}" data-room_size="{{ item.size }}"><small>Remove</small></a>
+                                        {% include "book/quantity-form.html" %}
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">{{ item.room.price | calc_subtotal:item.number_guests }}</p>
@@ -90,29 +87,12 @@
                             {% endfor %}
                             <tr>
                                 <td colspan="5" class="pt-5 text-right">
-                                    <!--<h6><strong>Total: £{{ total|floatformat:2 }}</strong></h6>-->
-                                    <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
-                                    {% if free_delivery_delta > 0 %}
-                                        <p class="mb-1 text-danger"><!--This will need to be removed but remains until fuction require removal-->
-                                            You could get free delivery by spending just <strong>£{{ free_delivery_delta }}</strong> more!
-                                        </p>
-                                    {% endif %}
+                                    {% include "book/book-total.html" %}
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="5" class="text-right">
-                                    <a href="{% url 'rooms' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                                        <span class="icon">
-                                            <i class="fas fa-chevron-left"></i>
-                                        </span>
-                                        <span class="text-uppercase">Back</span>
-                                    </a>
-                                    <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
-                                        <span class="text-uppercase">Secure Checkout</span>
-                                        <span class="icon">
-                                            <i class="fas fa-lock"></i>
-                                        </span>
-                                    </a>
+                                    {% include "book/checkout-buttons.html" %}
                                 </td>
                             </tr>
                         </table>
