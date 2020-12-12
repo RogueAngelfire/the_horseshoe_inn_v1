@@ -2,7 +2,7 @@
 
 ## The Horseshoe Inn
 
-# Project Purpose
+## Project Purpose
 
 ### This is a real pub my friend Paul and his partner Toni purchased on 2nd June and moved in on 16th July 2020 amid a pandemic
 This is a genuine requested website and will be used once submitted for assement and I am aware
@@ -36,14 +36,14 @@ possibly irreparable damage in 2020 in the UK with thousands of closures and job
 Early cancellation will be refunded with bookings cancelled within 48 hours will lose a deposit and 24 hours full amount.
 
 
-# UX design
+## UX design
 
 A room booking system is the main requirement, with easy date select and checkout with the option to add extras
 for instance breakfast. By having the option to register will allow the Inn to have a database of guests. therefore
 with a checkbox on registration they can recieve quarterly/monthly news letters or be informed of last minute room
 availability.
 
-# Wireframes
+## Wireframes
 
 Home & Menu
 
@@ -69,34 +69,34 @@ Terms & Conditions and a Covid-19 public information for rules and regulations
 
 ![Wireframe Terms and conditions](horseshoe_inn/mockup_images/horseshoe_6.png)
 
-# User Stories
+## User Stories
 
 ![userstories](horseshoe_inn/mockup_images/userstories.png)
 
 ## Usability and Visual Impact:
 
-# Suitability for purpose
+## Suitability for purpose
 
-# Navigation
+## Navigation
 
-# Ease of use
+## Ease of use
 
-# Information Architecture
+## Information Architecture
 
-# Defensive Design
+## Defensive Design
 
 THE TESTING TO CATCH ISSUES
 
 ## Layout and Visual Impact:
 
-# Responsive Design
+## Responsive Design
 
 I have as required taken the mobile first approach as required and a common practise in all assignments throughout my course.
 I have relied on the bootstrap technologies to achieve this.
 
-# Image Presentation
+## Image Presentation
 
-# Colour scheme and typography
+## Colour scheme and typography
 
 Using google fonts and my fonts dot com. I used a picture of the front of the inn to identify
 what their pub font is and the closest match that was free was Libre Baskerville.
@@ -118,40 +118,40 @@ colour so for continuity reasons it would be silly not to match this.
 
 ## Code Quality:
 
-# Appropriate use of HTML
+## Appropriate use of HTML
 
-# Appropriate use of CSS
+## Appropriate use of CSS
 
-# Appropriate use of JavaScript
+## Appropriate use of JavaScript
 
-# Appropriate use of Python
+## Appropriate use of Python
 
-# Appropriate use of the template language
+## Appropriate use of the template language
 
-# Appropriate use of Django
+## Appropriate use of Django
 
 ## Application Features:
 
-# App logic
+## App logic
 
-# Cross-app logic
+## Cross-app logic
 
-# E-commerce
+## E-commerce
 
-# Authentication and Security
+## Authentication and Security
 
-# Software Development practices:
+## Software Development practices:
 
-# Directory Structure and File Naming
+## Directory Structure and File Naming
 
-# Version control
+## Version control
 security not putting SECRET_KEYS in wrong place using config vars in Heroku
 
-# Testing implementation
+## Testing implementation
 
-# Testing write-up
+## Testing write-up
 
-# Technologies Used
+## Technologies Used
 
 * Django - https://www.djangoproject.com/ The Python Web framework used for full stack assignemt.
 * Github - https://github.com/ Where I stored my assignment.
@@ -184,7 +184,7 @@ security not putting SECRET_KEYS in wrong place using config vars in Heroku
 * DJ_Database -
 
 
-# Comments and Diary
+## Comments and Diary
 
 In the early stages of development I was having linking issues with the Readme file. Basically I wanted
 the best assignment possible with the best readme therefore wanted to add images to the readme rather
@@ -267,9 +267,9 @@ to do if this happens again.
 Sadly I lost all my rooms and menu items in my database however, I have been advised only add one or two items for testing purposes
 before adding to heroku database.
 
-# Data store integration
+## Data store integration
 
-# Deployment implementation
+## Deployment write-up Deployment write-up
 
 I took the following steps to deploy my website to Heroku:
 
@@ -348,9 +348,7 @@ line 10, ]
 * Inside click upload and add files.
 
 
-# Deployment write-up
-
-# Stetch Goals
+## Stretch Goals
 
 * Ideally I would like better function to the booking calendar/date picker where if it is booked already it would be highlighted
 red and show green if availble. 
@@ -359,9 +357,26 @@ red and show green if availble.
 
 
 
-# Media
+## Media
 
-# Credits and Achnoledgements
+Photographs of the Horseshoe inn are credited to myself Robin Collins. Paul Foot the owner is also responible for Additional
+pub images. He also has the rights to the older images supplied by the previous owners therefore I thank them and the customers
+of Bridgend, Kilmichael Glassary. However these images have only been used for testing purposes and I had no intention of using
+them as I mentioned eariler I did travel to take the photographs but denied.
+
+I also have used Unsplash stock library due to not being supplied content as requested these go to:
+Sebastian Coman Photography for the images with the Mozzarela and Tomatoes and the Scallop with Black Pudding.
+Krisztina Papp for the Ice Cream Photograph.
+Claudia Crespo - Chocolate mouse with cherry image.
+Max Nayman for what I have called - Apple and Hazelnut pie. 
+Louis Hansel - the prawn curry.
+Edward Franklin - Burger and fries.
+Tim Toomey - Steak and Chips.
+Vivian Rishe - Tray of Oysters.
+Wang Xi - Lobster Platter.
+Annastasiia Rusaeva - Waffels with fuit compot.
+
+## Credits and Achnoledgements
 
 I would like to express my eternal gratitute to Brian Macharia for being a great mentor and advisor for this and
 my previous assignments. I hope our paths cross again it has been a true honour to be your padiwan.
