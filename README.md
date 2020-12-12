@@ -408,4 +408,6 @@ my previous assignments. I hope our paths cross again it has been a true honour 
 Thank you to Johann Alberts and Tim Nelson at the code institute for allowing me to have a greater understanding of Models
 and Views with this milestone assignemt.
 
+Also thank you to all the Tutors at the Code Institute for your assistance over the past year.
+
 Futher thank goes to ckz8780 for his amazin Django lessons with the code institute which was essential refernce material.

@@ -1,4 +1,4 @@
-from django.shortcuts import render, reverse, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
@@ -25,7 +25,7 @@ def menu(request):
             sort = sortkey
             if sortkey == 'name':
                 sortkey = 'lower_name'
-                rooms = rooms.annotate(lower_name=Lower('name'))
+                menu = menu.annotate(lower_name=Lower('name'))
 
             if 'direction' in request.GET:
                 direction = request.GET['direction']
@@ -47,8 +47,10 @@ def menu(request):
             messages.error(request, "You didn't enter any search criteria!")
             return redirect(reverse('menu'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
-            products = products.filter(queries)
+            queries = Q(
+                name__icontains=query) | Q(
+                    description__icontains=query)
+            menu = menu.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
 
@@ -133,7 +135,8 @@ def edit_menu(request, menu_id):
 def delete_menu(request, menu_id):
     """ Delete a item from the pub menu """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only The Horseshoe Inn admin team can do that.')
+        messages.error(
+            request, 'Sorry, only The Horseshoe Inn admin team can do that.')
         return redirect(reverse('home'))
 
     menu = get_object_or_404(Menu, pk=menu_id)
