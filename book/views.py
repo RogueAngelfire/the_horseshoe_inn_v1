@@ -80,15 +80,15 @@ def adjust_booking(request, item_id):
     """ Adjust the booking by adding and subtracting guests quantity """
 
     room = get_object_or_404(Room, pk=item_id)
-    quantity = int(request.POST.get('number_guests'))
+    number_guests = int(request.POST.get('number_guests'))
     size = None
     if 'room_size' in request.POST:
         size = request.POST['room_size']
     book = request.session.get('book', {})
 
     if size:
-        if quantity > 0:
-            book[item_id]['items_by_size'][size] = quantity
+        if number_guests > 0:
+            book[item_id]['items_by_size'][size] = number_guests
             messages.success(
                 request, f'Updated {size.upper()} {room.name} quantity to {book[item_id]["items_by_size"][size]}')
         else:
@@ -98,8 +98,8 @@ def adjust_booking(request, item_id):
             messages.success(
                 request, f'Removed {size.upper()} {room.name} from your booking')
     else:
-        if quantity > 0:
-            book[item_id] = quantity
+        if number_guests > 0:
+            book[item_id] = number_guests
             messages.success(
                 request, f'Updated {room.name} quantity to {book[item_id]}')
         else:

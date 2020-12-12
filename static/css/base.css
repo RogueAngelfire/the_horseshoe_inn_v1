@@ -477,3 +477,7 @@ footer.page-footer {
     background-color: #8fb180;
 }
 
+html {
+position: relative;
+min-height: 100%;
+}

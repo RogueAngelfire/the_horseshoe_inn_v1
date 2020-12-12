@@ -364,6 +364,11 @@ red and show green if availble.
 * Another feature would be to have a different home page of portrait orientation for the mobile version of the website.
 as the page reduced in size a different image would be more suitable.
 
+* Due to an issue in my code confusing myself I have had to remove the function of + and - from the shop basket and keep the remove
+option and keep a simple back button to adjust booking. I did originally have this function working but made changes
+without giving myself enough notes to see what I had done. However, justifingly this works as a majority of hospitality websites
+do just have a back adjust booking button.
+
 
 
 ## Media
@@ -405,7 +410,7 @@ I used the following places for sources of information and snippets of code to h
 I would like to express my eternal gratitute to Brian Macharia for being a great mentor and advisor for this and
 my previous assignments. I hope our paths cross again it has been a true honour to be your padiwan.
 
-Thank you to Johann Alberts and Tim Nelson at the code institute for allowing me to have a greater understanding of Models
+Thank you to Johann Alberts bravoalpha79 and Tim Nelson at the code institute for allowing me to have a greater understanding of Models
 and Views with this milestone assignemt.
 
 Also thank you to all the Tutors at the Code Institute for your assistance over the past year.
