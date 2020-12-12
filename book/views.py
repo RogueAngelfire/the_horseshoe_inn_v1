@@ -46,23 +46,24 @@ def add_to_book(request, item_id):
     request.session['book'] = book
     return redirect(redirect_url)
 
-    """ Remove certain sizes that has no purpose on completion after testing """
-
     if size:
         if item_id in list(book.keys()):
             if size in book[item_id]['items_by_size'].keys():
                 book[item_id]['items_by_size'][size] += quantity
-                messages.success(request, f'REMOVE added size {room.name} to your to {book[item_id]["items_by_size"][size]}')
+                messages.success(
+                    request, f'REMOVE added size {room.name} to your to {book[item_id]["items_by_size"][size]}')
             else:
                 book[item_id]['items_by_size'][size] = quantity
-                messages.success(request, f'Added {size.upper()} {room.name} to your booking')
+                messages.success(
+                    request, f'Added {size.upper()} {room.name} to your booking')
         else:
             book[item_id] = {'items_by_size': {size: quantity}}
             messages.success(request, f'REMOVE added size {room.name} to your booking')
     else:
         if item_id in list(book.keys()):
             book[item_id] += quantity
-            messages.success(request, f'Added size {room.name} to your booking {book[item_id]}')
+            messages.success(
+                request, f'Added size {room.name} to your booking {book[item_id]}')
         else:
             book[item_id] = quantity
             messages.success(request, f'Added {room.name} to your booking')
@@ -88,16 +89,19 @@ def adjust_booking(request, item_id):
     if size:
         if quantity > 0:
             book[item_id]['items_by_size'][size] = quantity
-            messages.success(request, f'Updated {size.upper()} {room.name} quantity to {book[item_id]["items_by_size"][size]}')
+            messages.success(
+                request, f'Updated {size.upper()} {room.name} quantity to {book[item_id]["items_by_size"][size]}')
         else:
             del book[item_id]['items_by_size'][size]
             if not book[item_id]['items_by_size']:
                 book.pop(item_id)
-            messages.success(request, f'Removed {size.upper()} {room.name} from your booking')
+            messages.success(
+                request, f'Removed {size.upper()} {room.name} from your booking')
     else:
         if quantity > 0:
             book[item_id] = quantity
-            messages.success(request, f'Updated {room.name} quantity to {book[item_id]}')
+            messages.success(
+                request, f'Updated {room.name} quantity to {book[item_id]}')
         else:
             book.pop(item_id)
             messages.success(request, f'Removed {room.name} from booking')
@@ -120,7 +124,8 @@ def remove_from_booking(request, item_id):
             del book[item_id]['items_by_size'][size]
             if not book[item_id]['items_by_size']:
                 book.pop(item_id)
-            messages.success(request, f'Removed {size.upper()} {room.name} from your booking')
+            messages.success(
+                request, f'Removed {size.upper()} {room.name} from your booking')
         else:
             book.pop(item_id)
             messages.success(request, f'Removed {room.name} from your booking')
