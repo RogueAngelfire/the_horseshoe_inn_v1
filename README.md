@@ -1,4 +1,6 @@
-# Robin Collins Final Landmark Assignment Django Full Stack
+# Final Landmark Assignment Django Full Stack
+
+## Robin Collins
 
 ## The Horseshoe Inn
 
@@ -355,6 +357,13 @@ red and show green if availble.
 
 * Another feature that would be nice on the individual rooms have a carosel/slide show that shows different images of the rooms.
 
+* A cookie consent form is something that is required.
+
+* Another Idea would be to have the login fuction only feature on the Menu or/and the just the rooms page.
+
+* Another feature would be to have a different home page of portrait orientation for the mobile version of the website.
+as the page reduced in size a different image would be more suitable.
+
 
 
 ## Media
@@ -375,6 +384,21 @@ Tim Toomey - Steak and Chips.
 Vivian Rishe - Tray of Oysters.
 Wang Xi - Lobster Platter.
 Annastasiia Rusaeva - Waffels with fuit compot.
+
+I did consider using stock images to make up for the fact I couldn't get any from the amount of time effort and money I put
+into this. However, I didn't as finding free exteria pub shots is extremely difficult on free stock site producing zero results
+at the time of posting this.
+
+## Used to help 
+
+I used the following places for sources of information and snippets of code to help me obtain my goals:
+
+* https://www.codesdope.com/ for CSS tips
+
+* https://validator.w3.org/ for checking my HTML
+
+* 
+
 
 ## Credits and Achnoledgements
 
