@@ -6,7 +6,7 @@
 
 ## Project Purpose
 
-### This is a real pub my friend Paul and his partner Toni purchased on 2nd June and moved in on 16th July 2020 amid a pandemic
+This is a real pub my friend Paul and his partner Toni purchased on 2nd June and moved in on 16th July 2020 amid a pandemic
 This is a genuine requested website and will be used once submitted for assement and I am aware
 that I will require to use a branch should any urgent updates be required.
 
@@ -77,17 +77,37 @@ Terms & Conditions and a Covid-19 public information for rules and regulations
 
 ## Usability and Visual Impact:
 
+The website is easy navigate with an enthasis on colours similar to the colour pallet of the public house to keep
+continuity and branding. The colours are also associated with that of nature and escapisum. In my research I what
+I had in mind is relivant with other public houses. 
+
 ## Suitability for purpose
+
+This has purpose as my friend and client needs this alsmost immediatly however there are still are techinical issues
+move advanced than me and an alternate short term solution will be set up during the assesment onf this assignment.
+However, I will be comming back to this as a lot of information and media requested hasn't been forwarded due to the
+clients workload.
 
 ## Navigation
 
+The navigation is simlified with dropdown boxes to the appropraite pages with a large button to take you to the booking
+area the main purpose of the website.
+
+The Facebook link has been set up for the actual pub additional information wasn't provided.
+
 ## Ease of use
+
+I like to think the ease of use with this website would appeal to all ages and technical abilities giving peace of mind with
+a secure and professional checkout.
 
 ## Information Architecture
 
 ## Defensive Design
 
-THE TESTING TO CATCH ISSUES
+Using the built in Django validation I have used this to allow me to check model and form fields. 
+Price limits have been set in stripe.
+There is also a limit on image sizes should administration add a large image the css is able to adjust this accordingly
+however load times would still be an issue.
 
 ## Layout and Visual Impact:
 
@@ -118,27 +138,28 @@ surrounding the Horseshoe Inn. It featured in my choices when discussing this pr
 it was in my mock up styles and what is evenmore impressive my client painted a lot of there interior with the same
 colour so for continuity reasons it would be silly not to match this.
 
-## Code Quality:
+## Languages used for assignment
 
-## Appropriate use of HTML
-
-## Appropriate use of CSS
-
-## Appropriate use of JavaScript
-
-## Appropriate use of Python
-
-## Appropriate use of the template language
-
-## Appropriate use of Django
+I used HTML, CSS, JavaScript and Python within Django . Markdown was used in this Readme document.
 
 ## Application Features:
 
-## App logic
-
-## Cross-app logic
+* Home Page
+* Drop down Navigation
+* Date Picker/calendar
+* Menu Page - featuring Starter, Mains, Dessert and Ala-Carte. The breakfast options removed.
+* Contact Page - Email not included at this stage display only.
+* Events Page - Incomplete due to no content provided
+* All Product page - Removed to as unessarry
+* Public Information Page - Featuring all Current health notices and terms and conditions - Information not provided
+* Special Offers - Incomplete due to the same reasons.
+* Accommadation - Showing the selection of room originally 5 dropped to 4 as required for friends and family. allowing
+for booking and taking information from the booking and secure payments. Confirmation emails are also part of this function.
+* Focus is as a mobile first Application
 
 ## E-commerce
+
+For this I used stripe adding Secret key, public keys and webhooks.
 
 ## Authentication and Security
 
@@ -147,9 +168,13 @@ colour so for continuity reasons it would be silly not to match this.
 ## Directory Structure and File Naming
 
 ## Version control
-security not putting SECRET_KEYS in wrong place using config vars in Heroku
 
-## Testing implementation
+For this I used Github as advised by the Code institute - unfortunately I did have a few issues with my original work
+suffering a catesrophic error so I had to create a new branch. Fortunately I didn't lose anything but I belive this a 
+result of clearing my cache and cookies to get function back into my website when there had been errors with certain 
+functions. 
+
+I have now set the function to push to Heroku at the same time now which is extremely convienient.
 
 ## Testing write-up
 
@@ -183,7 +208,7 @@ security not putting SECRET_KEYS in wrong place using config vars in Heroku
 * Psycopg2 - https://pypi.org/project/psycopg2/ A postgresSQ database for Python
 * AWS S3 Bucket - https://aws.amazon.com/s3/ Amazon file to store static file and images to a database
 * Django Storages - https://django-storages.readthedocs.io/en/latest/
-* DJ_Database -
+* DJ_Database - https://pypi.org/project/dj-database-url/ 
 
 
 ## Comments and Diary
@@ -269,6 +294,16 @@ to do if this happens again.
 Sadly I lost all my rooms and menu items in my database however, I have been advised only add one or two items for testing purposes
 before adding to heroku database.
 
+13/12/20
+
+My final diary input as I fix the problems in the terminal where I just reflect on this truely epic journey of Django.
+Sadly a lot of the requirements of this project as this begining stages were no longer require in the website for example
+adding breakfast to the room as due to work load and constraints due to the COVID-19 pandemic Paul & Toni wouldn't be 
+offering breakfast but thats not to say they wouldn't in future so therefore I kenpt those functions in for now.
+
+I have also left the products in to show how much work I did with this assinment and commented out the navigation as to
+show what I had done.
+
 ## Data store integration
 
 ## Deployment write-up Deployment write-up
@@ -350,7 +385,7 @@ line 10, ]
 * Inside click upload and add files.
 
 
-## Stretch Goals
+## Stretch Goals - things to add in future.
 
 * Ideally I would like better function to the booking calendar/date picker where if it is booked already it would be highlighted
 red and show green if availble. 
@@ -369,7 +404,15 @@ option and keep a simple back button to adjust booking. I did originally have th
 without giving myself enough notes to see what I had done. However, justifingly this works as a majority of hospitality websites
 do just have a back adjust booking button.
 
+I would definately like to link the social media aspect to this project giving the customer a greater sense of trust
+and security.
 
+There is a lot of images with this project and that is because I wanted a to show case other views of the pub.
+
+## Submission Information
+
+Post submitting this assignment all my superuser information will be sent to the code institude to asses the websites
+function of add, edit and delete as suggested in the requirements.
 
 ## Media
 
@@ -379,6 +422,7 @@ of Bridgend, Kilmichael Glassary. However these images have only been used for t
 them as I mentioned eariler I did travel to take the photographs but denied.
 
 I also have used Unsplash stock library due to not being supplied content as requested these go to:
+
 Sebastian Coman Photography for the images with the Mozzarela and Tomatoes and the Scallop with Black Pudding.
 Krisztina Papp for the Ice Cream Photograph.
 Claudia Crespo - Chocolate mouse with cherry image.
@@ -402,10 +446,16 @@ I used the following places for sources of information and snippets of code to h
 
 * https://validator.w3.org/ for checking my HTML
 
-* 
+* http://pep8online.com/ to help validate my Python
+
+* https://miniwebtool.com/django-secret-key-generator/ to generate new secret key
+
+* https://stackoverflow.com/ always good for reference
+
+* https://css-tricks.com/snippets/css/css-triangle/ for the CSS up arrow
 
 
-## Credits and Achnoledgements
+## Credits and Acknowledgements
 
 I would like to express my eternal gratitute to Brian Macharia for being a great mentor and advisor for this and
 my previous assignments. I hope our paths cross again it has been a true honour to be your padiwan.
@@ -416,3 +466,7 @@ and Views with this milestone assignemt.
 Also thank you to all the Tutors at the Code Institute for your assistance over the past year.
 
 Futher thank goes to ckz8780 for his amazin Django lessons with the code institute which was essential refernce material.
+
+Finally I like to thank my supportive family In what can be described as a difficult you for the whole world.
+
+Further thanks goes to Paul and Toni for believing in me regarding this project. This is still only the begining!

@@ -32,7 +32,6 @@
                     <p class="lead mb-0 text-left font-weight-bold"><small>Price from </small>£{{ room.price }}</p>
                     {% if room.category %}
                     <p class="small mt-1 mb-0">
-                        <!-- 031220 These links of tag not leading to the rooms -->
                         <a class="text-muted" href="{% url 'rooms' %}?category={{ category.room.name }}">
                             <i class="fas fa-tag mr-1"></i>{{ room.category.friendly_name }}
                         </a>

@@ -80,7 +80,8 @@ def menu_detail(request, menu_id):
 def add_menu(request):
     """ Add a Menu item to the Pub Menu """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only The Horseshoe Inn admin team can do that.')
+        messages.error(
+            request, 'Sorry, only The Horseshoe Inn admin team can do that.')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
@@ -90,7 +91,8 @@ def add_menu(request):
             messages.success(request, 'Menu Item Successfully Added!')
             return redirect(reverse('menu_detail', args=[menu.id]))
         else:
-            messages.error(request, 'Failed to Add menu item. Please ensure the form is valid.')
+            messages.error(
+                request, 'Failed to Add menu item. Please ensure the form is valid.')
     else:
         form = MenuForm()
 
@@ -106,7 +108,8 @@ def add_menu(request):
 def edit_menu(request, menu_id):
     """ Edit a menu item for the pub """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only The Horseshoe Inn admin team can do that.')
+        messages.error(
+            request, 'Sorry, only The Horseshoe Inn admin team can do that.')
         return redirect(reverse('home'))
 
     menu = get_object_or_404(Menu, pk=menu_id)
@@ -117,7 +120,8 @@ def edit_menu(request, menu_id):
             messages.success(request, 'Successfully updated Menu item!')
             return redirect(reverse('menu_detail', args=[menu.id]))
         else:
-            messages.error(request, 'Failed to update the Menu. Please ensure the form is valid.')
+            messages.error(
+                request, 'Failed to update the Menu. Please ensure the form is valid.')
     else:
         form = MenuForm(instance=menu)
         messages.info(request, f'You are editing {menu.name}')

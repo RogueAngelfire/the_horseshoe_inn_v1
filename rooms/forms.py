@@ -9,7 +9,8 @@ class RoomForm(forms.ModelForm):
         model = Room
         fields = '__all__'
 
-    image = forms.ImageField(label='image', required=False, widget=CustomeClearableFileInput)
+    image = forms.ImageField(
+        label='image', required=False, widget=CustomeClearableFileInput)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)

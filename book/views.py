@@ -31,16 +31,19 @@ def add_to_book(request, item_id):
             if date in book[item_id]['items_by_date'].keys():
                 book[item_id]['items_by_size'][date]['number_guests'] += quantity
                 book[item_id]['items_by_size'][date]['number_of_nights'] += number_of_nights
-                messages.success(request, f'booking for arrival on {date.upper()} in {room.name} has been amended')
+                messages.success(
+                    request, f'booking for arrival on {date.upper()} in {room.name} has been amended')
             else:
                 book[item_id]['items_by_size'][date] = {}
                 book[item_id]['items_by_size'][date]['number_guests'] = quantity
                 book[item_id]['item_by_date'][date]['number_of_nights'] = number_of_nights
-                messages.success(request, f'Date added for {date.upper()} {room.name} to your booking')
+                messages.success(
+                    request, f'Date added for {date.upper()} {room.name} to your booking')
         else:
             booking_details = {'items_by_size': date, 'number_guests': quantity, 'number_of_nights': number_of_nights}
             book[item_id] = booking_details
-            messages.success(request, f'Added a date {date.upper()} {room.name} to your booking')
+            messages.success(
+                request, f'Added a date {date.upper()} {room.name} to your booking')
             print(booking_details)
 
     request.session['book'] = book
@@ -58,7 +61,8 @@ def add_to_book(request, item_id):
                     request, f'Added {size.upper()} {room.name} to your booking')
         else:
             book[item_id] = {'items_by_size': {size: quantity}}
-            messages.success(request, f'REMOVE added size {room.name} to your booking')
+            messages.success(
+                request, f'REMOVE added size {room.name} to your booking')
     else:
         if item_id in list(book.keys()):
             book[item_id] += quantity

@@ -126,7 +126,8 @@ def add_room(request):
             messages.success(request, 'Room Successfully Added!')
             return redirect(reverse('room_detail', args=[room.id]))
         else:
-            messages.error(request, 'Failed to Add Room. Please ensure the form is valid.')
+            messages.error(
+                request, 'Failed to Add Room. Please ensure the form is valid.')
     else:
         form = RoomForm()
 
@@ -142,7 +143,8 @@ def add_room(request):
 def edit_room(request, room_id):
     """ Edit a room for the pub """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only The Horseshoe Inn admin team can do that.')
+        messages.error(
+            request, 'Sorry, only The Horseshoe Inn admin team can do that.')
         return redirect(reverse('home'))
 
     room = get_object_or_404(Room, pk=room_id)
@@ -153,7 +155,8 @@ def edit_room(request, room_id):
             messages.success(request, 'Successfully updated Room!')
             return redirect(reverse('room_detail', args=[room.id]))
         else:
-            messages.error(request, 'Failed to update the Room. Please ensure the form is valid.')
+            messages.error(
+                request, 'Failed to update the Room. Please ensure the form is valid.')
     else:
         form = RoomForm(instance=room)
         messages.info(request, f'You are editing {room.name}')
@@ -171,7 +174,8 @@ def edit_room(request, room_id):
 def delete_room(request, room_id):
     """ Delete a room from the pub """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only The Horseshoe Inn admin team can do that.')
+        messages.error(
+            request, 'Sorry, only The Horseshoe Inn admin team can do that.')
         return redirect(reverse('home'))
 
     room = get_object_or_404(Room, pk=room_id)
