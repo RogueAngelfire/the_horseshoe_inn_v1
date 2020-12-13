@@ -1,5 +1,5 @@
 html {
-    height: 100%;
+    min-height: 100%;
     position: relative;
 }
 
@@ -479,6 +479,6 @@ footer.page-footer {
 }
 
 #margin-bottom {
-    margin-bottom: 500px;
-    height: 70vh;
+    margin-bottom: 200px;
+    height: 50vh;
 }
